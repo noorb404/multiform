@@ -1,0 +1,13 @@
+#formLabel{
+    color: brown;
+    font-size: x-large;
+  }
+  
+  #mainDiv{
+    padding: 5%;
+    max-width: 60%;
+  }
+  
+  hr{
+    padding-bottom: 2%;
+  }
