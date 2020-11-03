@@ -31,10 +31,9 @@ export class Confirm extends Component {
 
                 <div className="row">
                     <div className="col-6">
-                        <button className="btn btn-danger" onClick={this.back}>Back</button>
+                         <Button className="float-right" onClick={this.continue}>Save and Continue</Button>
                     </div>
                     <div className="col-6 text-right">
-                        <Button className="float-right" onClick={this.continue}>Save and Continue</Button>
                         <Button className="float-left" id="backBtn" onClick={this.back}>Previous Page</Button>
                     </div>
                 </div>
