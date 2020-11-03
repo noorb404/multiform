@@ -1,51 +1,63 @@
-import './FormOne.css';
-import React, { useState } from 'react';
-import {Form} from 'react-bootstrap';
-import {Button} from 'react-bootstrap';
-import {Col} from 'react-bootstrap';
-import {Container} from 'react-bootstrap';
-
-
-
+import React, { Component } from 'react'
+import '../css/taxPayerInfo.css'
+import {Form , Button , Col , Container} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
+export class FilingStatus extends Component {
 
+   state = {
+       Validated : false
+   };
 
-
-function FormPageOne() {
-
-  const [validated, setValidated] = useState(false);
-  
-  const handleSubmit = (event) => {
+   handleSubmit = (event) => {
     const form = event.currentTarget;
     if (form.checkValidity() === false) {
       event.preventDefault();
       event.stopPropagation();
     }
+    if (form.checkValidity() === true) {
+        this.continue(event);
+      }
 
-    setValidated(true);
+    this.setState({
+        Validated:true
+    });
   };
+    continue = e => {
+        e.preventDefault();
+        this.props.nextStep();
+    };
 
+    render() {
+        const { values, inputChange } = this.props;
 
-  return (
-    <div id="mainDiv" >
+        return (
+
+<div id="mainDiv"  className="form-container" >
      <Container> 
        <div id="formLabel" className="text-center"> Taxpayer Information </div>
        <hr />
-          <Form noValidate validated={validated} onSubmit={handleSubmit}>
+          <Form noValidate validated={this.state.Validated} onSubmit={this.handleSubmit}>
             <Form.Row>
                   <Form.Group as={Col} md="5" controlId="FirstName">
                     <Form.Label>First name:</Form.Label>
                     <Form.Control
                       required
+                      name="firstName"
+                      onChange={inputChange('firstName')} 
+                      value={values.firstName}
                       type="text"
+ 
                     />
                   </Form.Group>
                   <Form.Group as={Col} md="4" controlId="MiddleInitial">
                     <Form.Label>Middle Initial:</Form.Label>
                     <Form.Control
                       required
+                      name="middleInitial"
+                      onChange={inputChange('middleInitial')}
+                       value={values.middleInitial}
                       type="text"
                     />
                   </Form.Group>
@@ -57,6 +69,9 @@ function FormPageOne() {
                     <Form.Label>Last name:</Form.Label>
                     <Form.Control
                       required
+                      name="lastName"
+                      onChange={inputChange('lastName')}
+                       value={values.lastName}
                       type="text"
                     />
                   </Form.Group>
@@ -64,6 +79,9 @@ function FormPageOne() {
                     <Form.Label>Occupation:</Form.Label>
                     <Form.Control
                       required
+                      name="occupation"
+                      onChange={inputChange('occupation')}
+                       value={values.occupation}
                       type="text"
                     />
                   </Form.Group>
@@ -75,14 +93,20 @@ function FormPageOne() {
                     <Form.Label>Social Security Number:</Form.Label>
                     <Form.Control
                       required
+                      name="socialId"
+                      onChange={inputChange('socialId')}
+                       value={values.socialId}
                       type="text"
                     />
                   </Form.Group>
                   <Form.Group as={Col} md="4" controlId="Birth">
-                    <Form.Label>Date of Birth:  ( mm / dd / yyyy ):</Form.Label>
+                    <Form.Label>Date of Birth:</Form.Label>
                     <Form.Control
                       required
-                      type="text"
+                      name="birth"
+                      onChange={inputChange('birth')}
+                      value={values.birth}
+                      type="date"
                     />
                   </Form.Group>
             </Form.Row>
@@ -106,7 +130,7 @@ function FormPageOne() {
             <hr />
 
             <Form.Row>
-                  <Form.Group as={Col} md="5" controlId="validationCustom03">
+                  <Form.Group as={Col} md="5" controlId="streetAddress">
                     <Form.Label>Street Address:</Form.Label>
                     <Form.Control type="text" required />
                     <Form.Control.Feedback type="invalid">
@@ -114,7 +138,7 @@ function FormPageOne() {
                     </Form.Control.Feedback>
                   </Form.Group>
 
-                  <Form.Group as={Col} md="4" controlId="validationCustom03">
+                  <Form.Group as={Col} md="4" controlId="Aptno">
                     <Form.Label>Apt No:</Form.Label>
                     <Form.Control type="text"  required />
                     <Form.Control.Feedback type="invalid">
@@ -125,7 +149,7 @@ function FormPageOne() {
 
 
             <Form.Row>
-              <Form.Group as={Col} md="4" controlId="validationCustom03">
+              <Form.Group as={Col} md="4" controlId="City">
                 <Form.Label>City:</Form.Label>
                 <Form.Control type="text"  required />
                 <Form.Control.Feedback type="invalid">
@@ -133,7 +157,7 @@ function FormPageOne() {
                 </Form.Control.Feedback>
               </Form.Group>
 
-              <Form.Group as={Col} md="3" controlId="validationCustom04">
+              <Form.Group as={Col} md="3" controlId="State">
                 <Form.Label>State:</Form.Label>
                 <Form.Control type="text"  required />
                 <Form.Control.Feedback type="invalid">
@@ -141,7 +165,7 @@ function FormPageOne() {
                 </Form.Control.Feedback>
               </Form.Group>
 
-              <Form.Group as={Col} md="2" controlId="validationCustom05">
+              <Form.Group as={Col} md="2" controlId="Zip">
                 <Form.Label>Zip:</Form.Label>
                 <Form.Control type="text"  required />
                 <Form.Control.Feedback type="invalid">
@@ -191,13 +215,10 @@ function FormPageOne() {
             </Form.Group>
             <Button className="float-right" type="submit">Save and Continue</Button>
           </Form>
-       </Container>
-    </div>
-  );
+        </Container>
+     </div>
+        )
+    }
 }
 
-    
- 
-
-
-export default FormPageOne;
+export default FilingStatus
