@@ -25,14 +25,14 @@ export class Confirm extends Component {
                <Form>
                    <Form.Row>
                         <ul class="list-group">
-                            <li class="list-group-item">Name: dsaddasdasd{lastName} {middleInitial} {firstName} </li>
-                            <li class="list-group-item">Occupation: ssssssssssssssssssssssssss{occupation}</li>
-                            <li class="list-group-item">Social Security Number: ssssssssssssssss{socialId}</li>
+                            <li class="list-group-item">Name:{lastName} {middleInitial} {firstName} </li>
+                            <li class="list-group-item">Occupation:{occupation}</li>
+                            <li class="list-group-item">Social Security Number:{socialId}</li>
                             <li class="list-group-item">Date Of Birth: {birth}</li>
                         </ul>
                    </Form.Row>
                     <hr/>
-                    <Button className="float-right" onClick={this.continue}>Save and Continue</Button>
+                    <Button className="float-right" id="nextBtn" onClick={this.continue}>Save and Continue</Button>
                     <Button className="float-left" id="backBtn" onClick={this.back}>Previous Page</Button>
                 </Form>
             </Container>

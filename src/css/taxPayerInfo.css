@@ -6,24 +6,35 @@
   #confirmDiv{
     padding: 7%;
   }
-  #mainDiv{
+  #infoDiv{
     padding: 5%;
   }
   #filingStatusMainDiv{
     padding: 5%;
   }
-  @media (max-width:600px){
+  @media (max-width:400px){
     #filingStatusMainDiv{
       padding: 0%;
       height: 600px;
       width: 100%;
     }
-    #mainDiv{
-      height: 2000px;
-    }
     #confirmDiv{
       height: 600px;
-      padding: 3%;
+      padding: 0%;
+    }
+    #infoDiv{
+      padding: 0%;
+      height: 1750px;
+    }
+    #nextBtn{
+      width: 120px;
+      
+      font-size: x-small;
+    }
+    #backBtn{
+      width: 110px;
+      
+      font-size: x-small;
     }
 
   }
