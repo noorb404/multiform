@@ -29,7 +29,7 @@ export class FilingStatus extends Component {
         const { values, inputChange } = this.props;
 
         return (
-            <div id="mainDiv"  className="form-container" >
+            <div id="filingStatusMainDiv"  className="form-container" >
             <Container>
                 <div id="formLabel" className="text-center">Filing Status</div>
                 <hr />

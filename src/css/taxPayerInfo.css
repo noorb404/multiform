@@ -3,11 +3,31 @@
     font-size: x-large;
     font-family: Arial;
   }
-  
+  #confirmDiv{
+    padding: 7%;
+  }
   #mainDiv{
     padding: 5%;
   }
-  
+  #filingStatusMainDiv{
+    padding: 5%;
+  }
+  @media (max-width:600px){
+    #filingStatusMainDiv{
+      padding: 0%;
+      height: 600px;
+      width: 100%;
+    }
+    #mainDiv{
+      height: 2000px;
+    }
+    #confirmDiv{
+      height: 600px;
+      padding: 3%;
+    }
+
+  }
+
   hr{
     padding-bottom: 1%;
   }

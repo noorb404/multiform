@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Button } from 'react-bootstrap';
+import {Button, Container, Form } from 'react-bootstrap';
 
 export class Confirm extends Component {
     continue = e => {
@@ -18,25 +18,24 @@ export class Confirm extends Component {
         } = this.props;
 
         return (
-            <div className="form-container">
-                <h1 className="mb-5">Confirm</h1>
-                <ul class="list-group">
-                    <li class="list-group-item">Name: {lastName} {middleInitial} {firstName} </li>
-                    <li class="list-group-item">Occupation: {occupation}</li>
-                    <li class="list-group-item">Social Security Number: {socialId}</li>
-                    <li class="list-group-item">Date Of Birth: {birth}</li>
-                </ul>
-
-                <br /><br />
-
-                <div className="row">
-                    <div className="col-6">
-                         <Button className="float-right" onClick={this.continue}>Save and Continue</Button>
-                    </div>
-                    <div className="col-6 text-right">
-                        <Button className="float-left" id="backBtn" onClick={this.back}>Previous Page</Button>
-                    </div>
-                </div>
+            <div id="confirmDiv" className="form-container">
+            <Container>
+                <div id="formLabel" className="text-center">Confirm</div>
+                <hr />
+               <Form>
+                   <Form.Row>
+                        <ul class="list-group">
+                            <li class="list-group-item">Name: dsaddasdasd{lastName} {middleInitial} {firstName} </li>
+                            <li class="list-group-item">Occupation: ssssssssssssssssssssssssss{occupation}</li>
+                            <li class="list-group-item">Social Security Number: ssssssssssssssss{socialId}</li>
+                            <li class="list-group-item">Date Of Birth: {birth}</li>
+                        </ul>
+                   </Form.Row>
+                    <hr/>
+                    <Button className="float-right" onClick={this.continue}>Save and Continue</Button>
+                    <Button className="float-left" id="backBtn" onClick={this.back}>Previous Page</Button>
+                </Form>
+            </Container>
             </div>
         )
     }
