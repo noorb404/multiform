@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import FilingStatus from './filingStatus';
-import Children, { Choose } from './choose';
+import Choose from './choose';
 import Confirm from './confirm';
 import TaxPayerInfo from './taxPayerInfo';
 import Success from './success';
@@ -23,7 +23,9 @@ export class Form extends Component {
     };
 
 
-
+    confirmPage = () =>{
+        this.setState({step: 4});
+    }
     nextStep = () => {
         const { step } = this.state;
         this.setState({ step: step + 1 });
@@ -49,6 +51,7 @@ export class Form extends Component {
             case 1:
                 return(
                     <Choose 
+                        confirmPage={this.confirmPage}
                         nextStep={this.nextStep}
                     />
                 );

@@ -1,14 +1,23 @@
 import React, { Component } from 'react';
 import {Button, Container, Form } from 'react-bootstrap';
 
-export class Choose extends Component {
-    continue = e => {
-        e.preventDefault();
-        this.props.nextStep();
+
+
+const Choose = props =>{
+  
+    const hiddenFileInput = React.useRef(null);
+
+    const onContinue = e => {
+        props.nextStep();
+    };
+    const onChangeHandler = e =>
+    {
+        props.confirmPage();
+    };
+    const handleClick = event => {
+        hiddenFileInput.current.click();
     };
 
-
-    render() {
  
 
         return (
@@ -18,14 +27,23 @@ export class Choose extends Component {
                 <hr/>
                <Form>
                    <label>Upload last year PDF file:</label>
-                   <Form.Row >  
-                        <input type="file" name="file" onChange={this.onChangeHandler}/>
+                   <Form.Row>  
+                  
+                   <Button id="manuallyBtn" style={{backgroundColor:'white', color:'black' , border:'0'}} onClick={handleClick}>
+                        Upload a file
+                    </Button>
+                    <input
+                        type="file"
+                        ref={hiddenFileInput}
+                        onChange={onChangeHandler}
+                        style={{display: 'none'}}
+                    />   
                    </Form.Row>
                    
                     <hr/>
                     <label>Or you can manually fill out your info:</label>
                    <Form.Row>
-                        <Button className="float-right" id="nextBtn" onClick={this.continue}>Fill your information manually</Button>
+                        <Button className="float-right" id="manuallyBtn" onClick={onContinue}>Fill your information manually</Button>
                    </Form.Row>
                    
                 
@@ -33,7 +51,7 @@ export class Choose extends Component {
             </Container>
             </div>
         )
-    }
+    
 }
 
 export default Choose

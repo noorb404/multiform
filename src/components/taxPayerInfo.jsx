@@ -34,7 +34,7 @@ export class FilingStatus extends Component {
   back = e => {
     e.preventDefault();
     this.props.prevStep();
-  };
+};
 
     render() {
         const { values, inputChange } = this.props;
@@ -61,7 +61,7 @@ export class FilingStatus extends Component {
                           <Form.Group as={Col} md="4" controlId="MiddleInitial">
                             <Form.Label>Middle Initial:</Form.Label>
                             <Form.Control
-                              required
+                    
                               name="middleInitial"
                               onChange={inputChange('middleInitial')}
                               value={values.middleInitial}
@@ -154,8 +154,7 @@ export class FilingStatus extends Component {
                           <Form.Group as={Col} md="4" controlId="Aptno">
                             <Form.Label>Apt No:</Form.Label>
                             <Form.Control 
-                              type="text"
-                              required 
+                              type="number"            
                               name="aptNo"
                               onChange={inputChange('aptNo')}
                               value={values.aptNo}
