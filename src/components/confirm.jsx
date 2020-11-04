@@ -14,7 +14,7 @@ export class Confirm extends Component {
 
     render() {
         const {
-            values: {firstName,lastName,middleInitial,occupation,socialId,birth,streetAddress,aptNo,city,state,zip,filingStatus,dependentFirstName,dependentLastName,dependentMiddleInitial,dependentSocialId,dependentBirth}
+            values: {firstName,lastName,middleInitial,occupation,socialId,birth,streetAddress,aptNo,city,state,zip,filingStatus,dependentFirstName,dependentLastName,dependentMiddleInitial,dependentSocialId,dependentBirth,spouseFirstName,spouseLastName,spouseMiddleInitial,spouseSocialId,spouseBirth}
         } = this.props;
 
         return (
@@ -74,6 +74,31 @@ export class Confirm extends Component {
                         <Form.Row>
                                 <label style={{fontWeight:"bold",color:"gray", marginLeft:'5px' , paddingRight:'10px'}}>Date Of Birth: </label>
                                 <label> {dependentBirth} </label>
+                        </Form.Row>
+                        </div>
+                    )
+                     :  null }
+
+                    
+
+                { spouseFirstName ? (
+                     <div>
+                        <hr />
+                        <Form.Row>
+                                    <div style={{ textTransform: 'uppercase' , fontSize:'x-large' , color:'rgb(59, 142, 80)'}}>{spouseFirstName} Information</div>  
+                        </Form.Row>
+                        <hr id="heavyHr" />
+                        <Form.Row>
+                                <label style={{fontWeight:"bold",color:"gray" , marginLeft:'5px', paddingRight:'10px'}}>Name : </label>
+                                <label style={{ textTransform: 'uppercase'}}> {spouseFirstName} {spouseMiddleInitial} {spouseLastName} </label>
+                        </Form.Row>
+                        <Form.Row>
+                                <label style={{fontWeight:"bold",color:"gray", marginLeft:'5px' , paddingRight:'10px'}}>Social Security Number: </label>
+                                <label> {spouseSocialId} </label>
+                        </Form.Row>
+                        <Form.Row>
+                                <label style={{fontWeight:"bold",color:"gray", marginLeft:'5px' , paddingRight:'10px'}}>Date Of Birth: </label>
+                                <label> {spouseBirth} </label>
                         </Form.Row>
                         </div>
                     )

@@ -6,6 +6,7 @@ import TaxPayerInfo from './taxPayerInfo';
 import Success from './success';
 import DependentAsk from './dependentAsk';
 import Dependent from './dependent';
+import Spouse from './spouse';
 
 export class Form extends Component {
     state = {
@@ -27,11 +28,20 @@ export class Form extends Component {
         dependentMiddleInitial:'',
         dependentSocialId:'',
         dependentBirth:'',
+        spouseFirstName:'',
+        spouseLastName:'',
+        spouseMiddleInitial:'',
+        spouseSocialId:'',
+        spouseBirth:'',
     };
 
 
     confirmPage = () =>{
-        this.setState({step: 6});
+        this.setState({step: 7});
+    }
+    doubleStep = () =>{
+        const { step } = this.state;
+        this.setState({step: step + 2 })
     }
     nextStep = () => {
         const { step } = this.state;
@@ -51,8 +61,8 @@ export class Form extends Component {
 
     render() {
         const { step } = this.state;
-        const {firstName,lastName,middleInitial,occupation,socialId,birth,streetAddress,aptNo,city,state,zip,filingStatus,dependentFirstName,dependentLastName,dependentMiddleInitial,dependentSocialId,dependentBirth} = this.state;
-        const values = { firstName,lastName,middleInitial,occupation,socialId,birth,streetAddress,aptNo,city,state,zip,filingStatus,dependentFirstName,dependentLastName,dependentMiddleInitial,dependentSocialId,dependentBirth};
+        const {firstName,lastName,middleInitial,occupation,socialId,birth,streetAddress,aptNo,city,state,zip,filingStatus,dependentFirstName,dependentLastName,dependentMiddleInitial,dependentSocialId,dependentBirth,spouseFirstName,spouseLastName,spouseMiddleInitial,spouseSocialId,spouseBirth} = this.state;
+        const values = { firstName,lastName,middleInitial,occupation,socialId,birth,streetAddress,aptNo,city,state,zip,filingStatus,dependentFirstName,dependentLastName,dependentMiddleInitial,dependentSocialId,dependentBirth,spouseFirstName,spouseLastName,spouseMiddleInitial,spouseSocialId,spouseBirth};
 
         switch (step) {
             case 1:
@@ -76,11 +86,22 @@ export class Form extends Component {
                     <FilingStatus
                         nextStep={this.nextStep}
                         prevStep={this.prevStep}
+                        doubleStep={this.doubleStep}
                         inputChange={this.inputChange}
                         values={values}
                     />
                 );
             case 4:
+                return(
+                    <Spouse 
+                        nextStep={this.nextStep}
+                        prevStep={this.prevStep}
+                     
+                        inputChange={this.inputChange}
+                        values={values}
+                    />
+                );
+            case 5:
                 return(
                     <DependentAsk 
                         nextStep={this.nextStep}
@@ -89,7 +110,7 @@ export class Form extends Component {
                         values={values}
                     />
                 );
-            case 5:
+            case 6:
                 return(
                     <Dependent 
                         nextStep={this.nextStep}
@@ -98,7 +119,7 @@ export class Form extends Component {
                         values={values}
                     />
                 );
-            case 6:
+            case 7:
                 return (
                     <Confirm  
                         nextStep={this.nextStep}
@@ -106,7 +127,7 @@ export class Form extends Component {
                         values={values}
                     />
                 );
-            case 7:
+            case 8:
                 return(
                     <Success />  
                 );

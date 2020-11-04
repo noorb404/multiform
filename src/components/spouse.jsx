@@ -43,7 +43,7 @@ export class Spouse extends Component {
 
           <div id="infoDiv"  className="form-container">
             <Container> 
-              <div id="formLabel" className="text-center"> Taxpayer Information </div>
+              <div id="formLabel" className="text-center"> Spouse Information </div>
               <hr />
                   <Form noValidate validated={this.state.Validated} onSubmit={this.handleSubmit}>
                   <Form.Row>
