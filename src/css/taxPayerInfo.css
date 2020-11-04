@@ -63,3 +63,20 @@ label{
     width:20px; 
     vertical-align: middle;
   }
+  input[type=file]{
+    color: rgb(0, 81, 255);
+  }
+  #confirmlb{
+    color: rgb(39, 202, 80);
+    margin-left: 5px;
+    padding-top: 2%;
+    font-size: x-large;
+  }
+  #heavyHr{
+    border: none;
+    height: 1px;
+    margin-top: 2px;
+    /* Set the hr color */
+    color: rgb(180, 180, 180); /* old IE */
+    background-color: rgb(180, 180, 180);
+  }

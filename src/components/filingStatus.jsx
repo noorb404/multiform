@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 export class FilingStatus extends Component {
 
     state = {
-        radio: 1
+        radio: 0
       }
       
     onCheck = (nr) => () => {
@@ -38,7 +38,7 @@ export class FilingStatus extends Component {
                     <div className="radio ml-2 p-2">
                             <label>
                                 <input onClick={this.onCheck(1)} checked={this.state.radio===1 ? true : false}  type="radio"
-                                     id="radio1" />
+                                     id="Single" />
                                 Single
                             </label>
                    </div>

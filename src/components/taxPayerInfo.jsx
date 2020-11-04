@@ -10,7 +10,8 @@ export class FilingStatus extends Component {
        Validated : false
    };
 
-   handleSubmit = (event) => {
+  //check if the form validation .. TODO check birthday +18 
+  handleSubmit = (event) => {
     const form = event.currentTarget;
     if (form.checkValidity() === false) {
       event.preventDefault();
@@ -24,10 +25,16 @@ export class FilingStatus extends Component {
         Validated:true
     });
   };
-    continue = e => {
+
+  //next step -> next screen 
+  continue = e => {
         e.preventDefault();
         this.props.nextStep();
-    };
+  };
+  back = e => {
+    e.preventDefault();
+    this.props.prevStep();
+  };
 
     render() {
         const { values, inputChange } = this.props;
@@ -132,7 +139,13 @@ export class FilingStatus extends Component {
                     <Form.Row>
                           <Form.Group as={Col} md="5" controlId="streetAddress">
                             <Form.Label>Street Address:</Form.Label>
-                            <Form.Control type="text" required />
+                            <Form.Control
+                             type="text"
+                              required
+                              name="streetAddress"
+                              onChange={inputChange('streetAddress')}
+                              value={values.streetAddress}
+                               />
                             <Form.Control.Feedback type="invalid">
                               Please provide a valid Address.
                             </Form.Control.Feedback>
@@ -140,7 +153,13 @@ export class FilingStatus extends Component {
 
                           <Form.Group as={Col} md="4" controlId="Aptno">
                             <Form.Label>Apt No:</Form.Label>
-                            <Form.Control type="text"  required />
+                            <Form.Control 
+                              type="text"
+                              required 
+                              name="aptNo"
+                              onChange={inputChange('aptNo')}
+                              value={values.aptNo}
+                              />
                             <Form.Control.Feedback type="invalid">
                               Please provide a valid city.
                             </Form.Control.Feedback>
@@ -151,7 +170,13 @@ export class FilingStatus extends Component {
                     <Form.Row>
                       <Form.Group as={Col} md="4" controlId="City">
                         <Form.Label>City:</Form.Label>
-                        <Form.Control type="text"  required />
+                        <Form.Control 
+                          type="text"
+                          required 
+                          name="city"
+                          onChange={inputChange('city')}
+                          value={values.city}
+                          />
                         <Form.Control.Feedback type="invalid">
                           Please provide a valid city.
                         </Form.Control.Feedback>
@@ -159,7 +184,13 @@ export class FilingStatus extends Component {
 
                       <Form.Group as={Col} md="3" controlId="State">
                         <Form.Label>State:</Form.Label>
-                        <Form.Control type="text"  required />
+                        <Form.Control 
+                          type="text"
+                          required
+                          name="state"
+                          onChange={inputChange('state')}
+                          value={values.state}
+                          />
                         <Form.Control.Feedback type="invalid">
                           Please provide a valid state.
                         </Form.Control.Feedback>
@@ -167,7 +198,13 @@ export class FilingStatus extends Component {
 
                       <Form.Group as={Col} md="2" controlId="Zip">
                         <Form.Label>Zip:</Form.Label>
-                        <Form.Control type="text"  required />
+                        <Form.Control 
+                          type="text"
+                          required
+                          name="zip"
+                          onChange={inputChange('zip')}
+                          value={values.zip}
+                          />
                         <Form.Control.Feedback type="invalid">
                           Please provide a valid zip.
                         </Form.Control.Feedback>
@@ -214,6 +251,7 @@ export class FilingStatus extends Component {
                       />
                     </Form.Group>
                     <Button className="float-right"  id="nextBtn" type="submit">Save and Continue</Button>
+                    <Button className="float-left" id="backBtn" onClick={this.back}>Previous Page</Button>
                   </Form>
                 </Container>
             </div>

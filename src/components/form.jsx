@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import FilingStatus from './filingStatus';
-import Children from './children';
+import Children, { Choose } from './choose';
 import Confirm from './confirm';
 import TaxPayerInfo from './taxPayerInfo';
+import Success from './success';
 
 export class Form extends Component {
     state = {
@@ -13,7 +14,15 @@ export class Form extends Component {
         occupation:'',
         socialId:'',
         birth:'',
+        streetAddress:'',
+        aptNo:'',
+        city:'',
+        state:'',
+        zip:'',
+        filingStatus:''
     };
+
+
 
     nextStep = () => {
         const { step } = this.state;
@@ -33,19 +42,26 @@ export class Form extends Component {
 
     render() {
         const { step } = this.state;
-        const {firstName,lastName,middleInitial,occupation,socialId,birth } = this.state;
-        const values = { firstName,lastName,middleInitial,occupation,socialId,birth};
+        const {firstName,lastName,middleInitial,occupation,socialId,birth,streetAddress,aptNo,city,state,zip,filingStatus} = this.state;
+        const values = { firstName,lastName,middleInitial,occupation,socialId,birth,streetAddress,aptNo,city,state,zip,filingStatus};
 
         switch (step) {
             case 1:
+                return(
+                    <Choose 
+                        nextStep={this.nextStep}
+                    />
+                );
+            case 2:
                 return (
                     <TaxPayerInfo
                         nextStep={this.nextStep}
+                        prevStep={this.prevStep}
                         inputChange={this.inputChange}
                         values={values}
                     />
                 );
-            case 2:
+            case 3:
                 return (
                     <FilingStatus
                         nextStep={this.nextStep}
@@ -55,13 +71,17 @@ export class Form extends Component {
                     />
                 );
           
-            case 3:
+            case 4:
                 return (
                     <Confirm  
                         nextStep={this.nextStep}
                         prevStep={this.prevStep}
                         values={values}
                     />
+                );
+            case 5:
+                return(
+                    <Success />  
                 );
             default:
         }
