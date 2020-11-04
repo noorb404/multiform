@@ -14,6 +14,7 @@ export class FilingStatus extends Component {
         this.setState({
           radio: nr
         });
+
     }
     continue = e => {
         e.preventDefault();
@@ -37,7 +38,7 @@ export class FilingStatus extends Component {
                     <label id="filingLabel">Choose your filing status.</label>
                     <div className="radio ml-2 p-2">
                             <label>
-                                <input onClick={this.onCheck(1)} checked={this.state.radio===1 ? true : false}  type="radio"
+                                <input  name="Single" onClick={this.onCheck(1)} onChange={inputChange('filingStatus') }  checked={this.state.radio===1 ? true : false}  type="radio"
                                      id="Single" />
                                 Single
                             </label>

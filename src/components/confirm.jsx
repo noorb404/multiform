@@ -14,7 +14,7 @@ export class Confirm extends Component {
 
     render() {
         const {
-            values: {firstName,lastName,middleInitial,occupation,socialId,birth,streetAddress,aptNo,city,state,zip,filingStatus}
+            values: {firstName,lastName,middleInitial,occupation,socialId,birth,streetAddress,aptNo,city,state,zip,filingStatus,dependentFirstName,dependentLastName,dependentMiddleInitial,dependentSocialId,dependentBirth}
         } = this.props;
 
         return (
@@ -25,9 +25,9 @@ export class Confirm extends Component {
                 <label>Let's make sure your personal information is correct.</label>
 
                <Form>
+                   
                    <Form.Row>
-                        <div id="confirmlb">Your Information</div>
-                       
+                        <div id="confirmlb">YOUR INFORMATION</div>  
                    </Form.Row>
                    <hr id="heavyHr" />
                    <Form.Row>
@@ -55,6 +55,30 @@ export class Confirm extends Component {
                          <label style={{fontWeight:"bold",color:"gray", marginLeft:'5px' , paddingRight:'10px'}}>Filing Status: </label>
                          <label> {filingStatus} </label>
                     </Form.Row>
+
+                    { dependentFirstName ? (
+                     <div>
+                        <hr />
+                        <Form.Row>
+                                    <div style={{ textTransform: 'uppercase' , fontSize:'x-large' , color:'rgb(59, 142, 80)'}}>{dependentFirstName} Information</div>  
+                        </Form.Row>
+                        <hr id="heavyHr" />
+                        <Form.Row>
+                                <label style={{fontWeight:"bold",color:"gray" , marginLeft:'5px', paddingRight:'10px'}}>Name : </label>
+                                <label style={{ textTransform: 'uppercase'}}> {dependentFirstName} {dependentMiddleInitial} {dependentLastName} </label>
+                        </Form.Row>
+                        <Form.Row>
+                                <label style={{fontWeight:"bold",color:"gray", marginLeft:'5px' , paddingRight:'10px'}}>Social Security Number: </label>
+                                <label> {dependentSocialId} </label>
+                        </Form.Row>
+                        <Form.Row>
+                                <label style={{fontWeight:"bold",color:"gray", marginLeft:'5px' , paddingRight:'10px'}}>Date Of Birth: </label>
+                                <label> {dependentBirth} </label>
+                        </Form.Row>
+                        </div>
+                    )
+                     :  null }
+
                     <Button className="float-right" id="nextBtn" onClick={this.continue}>Confirm</Button>
                     <Button className="float-left" id="backBtn" onClick={this.back}>Previous Page</Button>
                 </Form>

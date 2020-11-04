@@ -4,6 +4,8 @@ import Choose from './choose';
 import Confirm from './confirm';
 import TaxPayerInfo from './taxPayerInfo';
 import Success from './success';
+import DependentAsk from './dependentAsk';
+import Dependent from './dependent';
 
 export class Form extends Component {
     state = {
@@ -19,12 +21,17 @@ export class Form extends Component {
         city:'',
         state:'',
         zip:'',
-        filingStatus:''
+        filingStatus:'',
+        dependentFirstName:'',
+        dependentLastName:'',
+        dependentMiddleInitial:'',
+        dependentSocialId:'',
+        dependentBirth:'',
     };
 
 
     confirmPage = () =>{
-        this.setState({step: 4});
+        this.setState({step: 6});
     }
     nextStep = () => {
         const { step } = this.state;
@@ -44,8 +51,8 @@ export class Form extends Component {
 
     render() {
         const { step } = this.state;
-        const {firstName,lastName,middleInitial,occupation,socialId,birth,streetAddress,aptNo,city,state,zip,filingStatus} = this.state;
-        const values = { firstName,lastName,middleInitial,occupation,socialId,birth,streetAddress,aptNo,city,state,zip,filingStatus};
+        const {firstName,lastName,middleInitial,occupation,socialId,birth,streetAddress,aptNo,city,state,zip,filingStatus,dependentFirstName,dependentLastName,dependentMiddleInitial,dependentSocialId,dependentBirth} = this.state;
+        const values = { firstName,lastName,middleInitial,occupation,socialId,birth,streetAddress,aptNo,city,state,zip,filingStatus,dependentFirstName,dependentLastName,dependentMiddleInitial,dependentSocialId,dependentBirth};
 
         switch (step) {
             case 1:
@@ -73,8 +80,25 @@ export class Form extends Component {
                         values={values}
                     />
                 );
-          
             case 4:
+                return(
+                    <DependentAsk 
+                        nextStep={this.nextStep}
+                        prevStep={this.prevStep}
+                        confirmPage={this.confirmPage}
+                        values={values}
+                    />
+                );
+            case 5:
+                return(
+                    <Dependent 
+                        nextStep={this.nextStep}
+                        prevStep={this.prevStep}
+                        inputChange={this.inputChange}
+                        values={values}
+                    />
+                );
+            case 6:
                 return (
                     <Confirm  
                         nextStep={this.nextStep}
@@ -82,7 +106,7 @@ export class Form extends Component {
                         values={values}
                     />
                 );
-            case 5:
+            case 7:
                 return(
                     <Success />  
                 );
