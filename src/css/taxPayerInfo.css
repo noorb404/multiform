@@ -75,7 +75,13 @@ input[type=file]{
       width: 130px !important;
       position: relative;
       margin-right: 15px;
-      
+      padding-bottom: 50px;
+      height: 30px !important;
+    }
+    .taxInput3{
+      width: 130px !important;
+      position: relative;
+      margin-right: 15px;
       height: 30px !important;
     }
     .taxInput2{

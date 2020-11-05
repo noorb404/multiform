@@ -55,14 +55,14 @@ export class FilingStatus extends Component {
                               onChange={inputChange('firstName')} 
                               value={values.firstName}
                               type="text"
-                              className="taxInput"
+                              className="taxInput3"
         
                             />
                           </Form.Group>
                           <Form.Group  className="taxInput" as={Col} md="4" controlId="MiddleInitial">
                             <Form.Label className="taxPayerLabels">Middle Initial:</Form.Label>
                             <Form.Control
-                              className="taxInput"
+                              className="taxInput3"
                               name="middleInitial"
                               onChange={inputChange('middleInitial')}
                               value={values.middleInitial}
@@ -77,7 +77,7 @@ export class FilingStatus extends Component {
                             <Form.Label className="taxPayerLabels">Last name:</Form.Label>
                             <Form.Control
                               required
-                              className="taxInput"
+                              className="taxInput3"
                               name="lastName"
                               onChange={inputChange('lastName')}
                               value={values.lastName}
@@ -88,7 +88,7 @@ export class FilingStatus extends Component {
                             <Form.Label className="taxPayerLabels">Occupation:</Form.Label>
                             <Form.Control
                               required
-                              className="taxInput"
+                              className="taxInput3"
                               name="occupation"
                               onChange={inputChange('occupation')}
                               value={values.occupation}
@@ -103,7 +103,7 @@ export class FilingStatus extends Component {
                             <Form.Label className="taxPayerLabels">Social Security Number:</Form.Label>
                             <Form.Control
                               required
-                              className="taxInput"
+                              className="taxInput3"
                               name="socialId"
                               onChange={inputChange('socialId')}
                               value={values.socialId}
@@ -114,7 +114,7 @@ export class FilingStatus extends Component {
                             <Form.Label className="taxPayerLabels">Date of Birth:</Form.Label>
                             <Form.Control
                               required
-                              className="taxInput"
+                              className="taxInput3"
                               name="birth"
                               onChange={inputChange('birth')}
                               value={values.birth}
@@ -146,7 +146,7 @@ export class FilingStatus extends Component {
                             <Form.Label className="taxPayerLabels">Street Address:</Form.Label>
                             <Form.Control
                              type="text"
-                             className="taxInput"
+                             className="taxInput3"
                               required
                               name="streetAddress"
                               onChange={inputChange('streetAddress')}
@@ -162,7 +162,7 @@ export class FilingStatus extends Component {
                             <Form.Control 
                               type="number"            
                               name="aptNo"
-                              className="taxInput"
+                              className="taxInput3"
                               onChange={inputChange('aptNo')}
                               value={values.aptNo}
                               />
@@ -178,7 +178,7 @@ export class FilingStatus extends Component {
                         <Form.Label className="taxPayerLabels">City:</Form.Label>
                         <Form.Control 
                           type="text"
-                          className="taxInput"
+                          className="taxInput3"
                           required 
                           name="city"
                           onChange={inputChange('city')}
@@ -194,7 +194,7 @@ export class FilingStatus extends Component {
                         <Form.Control 
                           type="text"
                           required
-                          className="taxInput"
+                          className="taxInput3"
                           name="state"
                           onChange={inputChange('state')}
                           value={values.state}
@@ -209,7 +209,7 @@ export class FilingStatus extends Component {
                         <Form.Control 
                           type="text"
                           required
-                          className="taxInput"
+                          className="taxInput3"
                           name="zip"
                           onChange={inputChange('zip')}
                           value={values.zip}
