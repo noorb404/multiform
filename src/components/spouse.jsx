@@ -41,16 +41,17 @@ export class Spouse extends Component {
 
         return (
 
-          <div id="infoDiv"  className="form-container">
+          <div id="spouseDiv"  className="form-container">
             <Container> 
               <div id="formLabel" className="text-center"> Spouse Information </div>
               <hr />
                   <Form noValidate validated={this.state.Validated} onSubmit={this.handleSubmit}>
                   <Form.Row>
-                          <Form.Group as={Col} md="5" controlId="spouseFirstName">
-                            <Form.Label>First name:</Form.Label>
+                          <Form.Group className="taxInput" as={Col} md="5" controlId="spouseFirstName">
+                            <Form.Label className="taxPayerLabels">First name:</Form.Label>
                             <Form.Control
                               required
+                              className="taxInput3"
                               name="spouseFirstName"
                               onChange={inputChange('spouseFirstName')} 
                               value={values.spouseFirstName}
@@ -58,10 +59,10 @@ export class Spouse extends Component {
         
                             />
                           </Form.Group>
-                          <Form.Group as={Col} md="4" controlId="spouseMiddleInitial">
-                            <Form.Label>Middle Initial:</Form.Label>
+                          <Form.Group className="taxInput" as={Col} md="4" controlId="spouseMiddleInitial">
+                            <Form.Label className="taxPayerLabels">Middle Initial:</Form.Label>
                             <Form.Control
-                    
+                              className="taxInput3"
                               name="spouseMiddleInitial"
                               onChange={inputChange('spouseMiddleInitial')}
                               value={values.spouseMiddleInitial}
@@ -72,18 +73,47 @@ export class Spouse extends Component {
 
 
                     <Form.Row>
-                          <Form.Group as={Col} md="5" controlId="spouseLastName">
-                            <Form.Label>Last name:</Form.Label>
+                          <Form.Group className="taxInput" as={Col} md="5" controlId="spouseLastName">
+                            <Form.Label className="taxPayerLabels">Last name:</Form.Label>
                             <Form.Control
                               required
                               name="spouseLastName"
                               onChange={inputChange('spouseLastName')}
                               value={values.spouseLastName}
                               type="text"
+                              className="taxInput3"
                             />
                           </Form.Group>
-                          <Form.Group as={Col} md="4">
-                            <Form.Label>Jr., Sr., III:</Form.Label>
+                          <Form.Group className="taxInput" as={Col} md="4" controlId="spouseBirth">
+                            <Form.Label className="taxPayerLabels">Date of Birth:</Form.Label>
+                            <Form.Control
+                              required
+                              name="spouseBirth"
+                              onChange={inputChange('spouseBirth')}
+                              value={values.spouseBirth}
+                              type="date"
+                              className="taxInput3"
+                            />
+                          </Form.Group>
+                      
+                         
+                    </Form.Row>
+
+
+                    <Form.Row>
+                          <Form.Group className="taxInput" as={Col} md="5" controlId="spouseSocialId">
+                            <Form.Label className="taxPayerLabels">Social Security Number:</Form.Label>
+                            <Form.Control
+                              required
+                              name="spouseSocialId"
+                              onChange={inputChange('spouseSocialId')}
+                              value={values.spouseSocialId}
+                              type="text"
+                              className="taxInput3"
+                            />
+                          </Form.Group>
+                          <Form.Group  className="taxInput2" as={Col} md="4">
+                            <Form.Label className="taxPayerLabels">Jr., Sr., III:</Form.Label>
                             <Form.Control as="select" custom>
                               <option disabled selected>Choose an option</option>
                               <option>JR</option>
@@ -95,62 +125,144 @@ export class Spouse extends Component {
                               <option>VI</option>
                             </Form.Control>
                         </Form.Group>
-                         
-                    </Form.Row>
-
-
-                    <Form.Row>
-                          <Form.Group as={Col} md="5" controlId="spouseSocialId">
-                            <Form.Label>Social Security Number:</Form.Label>
-                            <Form.Control
-                              required
-                              name="spouseSocialId"
-                              onChange={inputChange('spouseSocialId')}
-                              value={values.spouseSocialId}
-                              type="text"
-                            />
-                          </Form.Group>
-                          <Form.Group as={Col} md="4" controlId="spouseBirth">
-                            <Form.Label>Date of Birth:</Form.Label>
-                            <Form.Control
-                              required
-                              name="spouseBirth"
-                              onChange={inputChange('spouseBirth')}
-                              value={values.spouseBirth}
-                              type="date"
-                            />
-                          </Form.Group>
                     </Form.Row>
                     <hr />
 
 
-                      <Form.Check 
-                            type="switch"
-                            id="switch1"
-                            label="Can a parent (or somebody else) claim you as a dependent on their tax return?"
-                          />
+                    <Form.Row>
+                      
+                      <div id="checkLabel">
+                              Can a parent (or somebody else) claim you as a dependent on their tax return?
+                      </div>
+                      <div id="checkLabelTop">
+                          <label id="yesNo">
+                            <input 
+                                      type="radio"
+                                      id="yes"
+                                      label="yes"
+                                    />
+                                    Yes
+                          </label>
+                          <label id="yesNo">
+                            <input 
+                                      type="radio"
+                                      id="no"
+                                      label="no"
+                                    />
+                                    No
+                          </label>
+                      </div>
+                  </Form.Row>
 
-                      <Form.Check 
-                            type="switch"
-                            id="switch2"
-                            label="Do you want to contribute $3 to the Presidential Election Campaign Fund?"
-                          />
-                      <Form.Check 
-                            type="switch"
-                            id="switch3"
-                            label="Is this person legally blind?"
-                          />
-                      <Form.Check 
-                            type="switch"
-                            id="switch4"
-                            label="Has this person passed away before the filing of this tax return?"
-                          />
-                      <Form.Check 
-                            type="switch"
-                            id="switch5"
-                            label="Were you impacted by a qualified disaster in 2019?"
-                          />
+                  <hr/>
 
+                  
+                  <Form.Row>
+                  
+                      <div id="checkLabel">
+                      Do you want to contribute $3 to the Presidential Election Campaign Fund?
+                      </div>
+                      <div id="checkLabelTop">
+                          <label id="yesNo">
+                            <input 
+                                      type="radio"
+                                      id="yes"
+                                      label="yes"
+                                    />
+                                    Yes
+                          </label>
+                          <label id="yesNo">
+                            <input 
+                                      type="radio"
+                                      id="no"
+                                      label="no"
+                                    />
+                                    No
+                          </label>
+                      </div>
+                  
+                  </Form.Row>
+
+                  <hr/>
+                  <Form.Row>
+                  
+                      <div id="checkLabel">
+                            Is this person legally blind?
+                      </div>
+                      
+                      <div id="checkLabelTop">
+                          <label id="yesNo">
+                            <input 
+                                      type="radio"
+                                      id="yes"
+                                      label="yes"
+                                    />
+                                    Yes
+                          </label>
+                          <label id="yesNo">
+                            <input 
+                                      type="radio"
+                                      id="no"
+                                      label="no"
+                                    />
+                                    No
+                          </label>
+                      </div>
+                  </Form.Row>
+
+                  <hr/>
+                  <Form.Row>
+                  
+                      <div id="checkLabel">
+                      Has this person passed away before the filing of this tax return?
+                      </div>
+                      <div id="checkLabelTop">
+                          <label id="yesNo">
+                            <input 
+                                      type="radio"
+                                      id="yes"
+                                      label="yes"
+                                    />
+                                    Yes
+                          </label>
+                          <label id="yesNo">
+                            <input 
+                                      type="radio"
+                                      id="no"
+                                      label="no"
+                                    />
+                                    No
+                          </label>
+                      </div>
+                  
+                  </Form.Row>
+
+                  <hr/>
+                  <Form.Row>
+                  
+                      <div id="checkLabel">
+                            Were you impacted by a qualified disaster in 2019?
+                      </div>
+                      <div id="checkLabelTop">
+                          <label id="yesNo">
+                            <input 
+                                      type="radio"
+                                      id="yes"
+                                      label="yes"
+                                    />
+                                    Yes
+                          </label>
+                          <label id="yesNo">
+                            <input 
+                                      type="radio"
+                                      id="no"
+                                      label="no"
+                                    />
+                                    No
+                          </label>
+                      </div>
+                      
+                  </Form.Row>
 
                     <hr />
                   

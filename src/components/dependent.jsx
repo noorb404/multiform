@@ -41,16 +41,17 @@ export class Dependent extends Component {
 
         return (
 
-          <div id="infoDiv"  className="form-container">
+          <div id="dependentDiv"  className="form-container">
             <Container> 
               <div id="formLabel" className="text-center"> Dependent Information </div>
               <hr />
                   <Form noValidate validated={this.state.Validated} onSubmit={this.handleSubmit}>
                     <Form.Row>
-                          <Form.Group as={Col} md="5" controlId="DependentFirstName">
-                            <Form.Label>First name:</Form.Label>
+                          <Form.Group className="taxInput" as={Col} md="5" controlId="DependentFirstName">
+                            <Form.Label className="taxPayerLabels">First name:</Form.Label>
                             <Form.Control
                               required
+                              className="taxInput3"
                               name="dependentFirstName"
                               onChange={inputChange('dependentFirstName')} 
                               value={values.dependentFirstName}
@@ -58,10 +59,10 @@ export class Dependent extends Component {
         
                             />
                           </Form.Group>
-                          <Form.Group as={Col} md="4" controlId="DependentMiddleInitial">
-                            <Form.Label>Middle Initial:</Form.Label>
+                          <Form.Group className="taxInput" as={Col} md="4" controlId="DependentMiddleInitial">
+                            <Form.Label className="taxPayerLabels">Middle Initial:</Form.Label>
                             <Form.Control
-                    
+                              className="taxInput3"
                               name="dependentMiddleInitial"
                               onChange={inputChange('dependentMiddleInitial')}
                               value={values.dependentMiddleInitial}
@@ -70,20 +71,50 @@ export class Dependent extends Component {
                           </Form.Group>
                     </Form.Row>
 
-
                     <Form.Row>
-                          <Form.Group as={Col} md="5" controlId="DependentLastName">
-                            <Form.Label>Last name:</Form.Label>
+                             <Form.Group className="taxInput" as={Col} md="5" controlId="DependentLastName">
+                                <Form.Label className="taxPayerLabels">Last name:</Form.Label>
+                                <Form.Control
+                                  required
+                                  className="taxInput3"
+                                  name="dependentLastName"
+                                  onChange={inputChange('dependentLastName')}
+                                  value={values.dependentLastName}
+                                  type="text"
+                                />
+                              </Form.Group>
+                              <Form.Group className="taxInput" as={Col} md="4" controlId="DependentBirth">
+                                <Form.Label className="taxPayerLabels">Date of Birth:</Form.Label>
+                                <Form.Control
+                                  required
+                                  className="taxInput3"
+                                  name="dependentBirth"
+                                  onChange={inputChange('dependentBirth')}
+                                  value={values.dependentBirth}
+                                  type="date"
+                                />
+                              </Form.Group>
+                    </Form.Row>
+
+
+                    <Form.Row> 
+                          <Form.Group className="taxInput" as={Col} md="5" controlId="DependentSocialId">
+                            <Form.Label className="taxPayerLabels">Social Security Number:</Form.Label>
                             <Form.Control
+                              className="taxInput3"
                               required
-                              name="dependentLastName"
-                              onChange={inputChange('dependentLastName')}
-                              value={values.dependentLastName}
+                              name="dependentSocialId"
+                              onChange={inputChange('dependentSocialId')}
+                              value={values.dependentSocialId}
                               type="text"
                             />
                           </Form.Group>
-                          <Form.Group as={Col} md="4">
-                            <Form.Label>Jr., Sr., III:</Form.Label>
+                    </Form.Row>
+
+
+                    <Form.Row>
+                    <Form.Group className="taxInput2"  as={Col} md="4">
+                            <Form.Label className="taxPayerLabels">Jr., Sr., III:</Form.Label>
                             <Form.Control as="select" custom>
                               <option disabled selected>Choose an option</option>
                               <option>JR</option>
@@ -94,37 +125,9 @@ export class Dependent extends Component {
                               <option>V</option>
                               <option>VI</option>
                             </Form.Control>
-                        </Form.Group>
-                         
-                    </Form.Row>
-
-
-                    <Form.Row>
-                          <Form.Group as={Col} md="5" controlId="DependentSocialId">
-                            <Form.Label>Social Security Number:</Form.Label>
-                            <Form.Control
-                              required
-                              name="dependentSocialId"
-                              onChange={inputChange('dependentSocialId')}
-                              value={values.dependentSocialId}
-                              type="text"
-                            />
-                          </Form.Group>
-                          <Form.Group as={Col} md="4" controlId="DependentBirth">
-                            <Form.Label>Date of Birth:</Form.Label>
-                            <Form.Control
-                              required
-                              name="dependentBirth"
-                              onChange={inputChange('dependentBirth')}
-                              value={values.dependentBirth}
-                              type="date"
-                            />
-                          </Form.Group>
-                    </Form.Row>
-
-                    <Form.Row>
-                    <Form.Group>
-                            <Form.Label>Relationship to Taxpayer:</Form.Label>
+                      </Form.Group>
+                    <Form.Group className="taxInput2" as={Col} md="4">
+                            <Form.Label className="taxPayerLabels">Relationship to Taxpayer:</Form.Label>
                             <Form.Control as="select" custom>
                                 <option disabled selected>Choose an option</option>
                                 <option>SON</option>

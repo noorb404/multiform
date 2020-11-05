@@ -1,52 +1,72 @@
+
+/*  MAIN DIVS FOR FORM PAGES  */
+
 #confirmDiv{
   padding: 7%;
 }
 #chooseDiv{
-  padding: 7%;
+  padding: 5%;
 }
 #infoDiv{
-  padding: 5%;
+  padding: 6%;
+  height: 1400px;
 }
 #filingStatusMainDiv{
   padding: 5%;
+  height: 600px;
+}
+#dependentDiv{
+  height: 550px;
+}
+#dependentDivAsk{
+  height: 300px;
+}
+#spouseDiv{
+  height: 1050px;
+}
+
+
+
+/* LABELS CSS -- CONFIRM PAGE & FILING PAGE */
+
+#filingLabel{
+  font-size: large;
+  font-family: Arial;
+  padding: 2%;
 }
 #formLabel{
   color: brown;
   font-size: x-large;
   font-family: Arial;
 }
-hr{
-  padding-bottom: 1%;
-}
-#filingLabel{
-  font-size: large;
-  font-family: Arial;
-  padding: 2%;
-}
-#backBtn{
-  background-color: white;
-  color: rgb(0, 102, 255);
-  border: 1px solid rgb(0, 102, 255);;
-}
-label{
-  font-size: medium;
-  font-family: Arial;
-}
-input[type=radio] {
-  height:20px; 
-  margin-top: -1px;
-  margin-right: 7px;
-  width:20px; 
-  vertical-align: middle;
-}
-input[type=file]{
-  color: rgb(0, 81, 255);
-}
 #confirmlb{
   color: rgb(39, 202, 80);
   margin-left: 5px;
   padding-top: 2%;
   font-size: x-large;
+}
+
+
+
+
+/*  CHECKBOX LABELS & BUTTONS   */
+#checkLabel{
+  font-size: 15px;
+  font-family:  sans-serif;
+  width: 100%;
+  padding-bottom: 10px;
+}
+#yesNo{
+  margin-right: 7px;
+}
+
+
+
+
+
+/*  ----- HR CSS -----  */
+hr{
+  padding-bottom: 1%;
 }
 #heavyHr{
   border: none;
@@ -57,8 +77,132 @@ input[type=file]{
   background-color: rgb(180, 180, 180);
 }
 
- 
-@media (max-width:400px){
+
+
+
+/*   <-- PREV PAGE BUTTON   */
+#backBtn{
+  background-color: white;
+  color: rgb(0, 102, 255);
+  border: 1px solid rgb(0, 102, 255);;
+}
+
+
+/*  INPUT  - RADIO & FILE  */
+input[type=radio] {
+  height:20px; 
+  margin-top: -1px;
+  margin-right: 7px;
+  width:20px; 
+  vertical-align: middle;
+}
+input[type=file]{
+  color: rgb(0, 81, 255);
+}
+
+
+
+
+/*  SCREEN RESPONSIVE BEGINS .350 - 450 - 780  */
+
+
+
+@media (max-width:780px){
+  
+
+  /* ADJUST TO SCREEN 780px MAX WIDTH*/
+  /* LABELS  */
+  #yesNo{
+    margin-right: 7px;
+  }
+  #checkLabel{
+    font-size: 15px;
+    font-family:  sans-serif;
+    width: 100%;
+    padding-bottom: 10px;
+  }
+  .chooseLabels{
+   font-size: medium; 
+  }
+  .taxPayerLabels{
+    font-size: 13px;
+  }
+
+
+
+
+  /* INPUT */
+  .taxInput{
+    width: 150px !important;
+    position: relative;
+    margin-right: 15px;
+    padding-bottom: 50px;
+    height: 30px !important;
+  }
+  .taxInput3{
+    width: 150px !important;
+    position: relative;
+    margin-right: 15px;
+    height: 30px !important;
+  }
+  .taxInput2{
+    margin-right: 23px;
+  }
+
+
+
+  /* MAIN DIVS */
+  #filingStatusMainDiv{
+    padding: 0%;
+    height: 500px;
+    width: 100%;
+  }
+  #chooseDiv{
+    padding: 0%;
+    height: 250px;
+  }
+  #confirmDiv{
+
+    padding: 10%;
+  }
+  #infoDiv{
+    padding: 0%;
+    height: 1300px;
+  }
+
+
+
+  /* BUTTONS */
+  #nextBtn{
+    width: 180px;
+    font-size: medium;
+  }
+  #confirmBtn{
+    font-size: medium;
+  }
+  #noContinue{
+    font-size: x-small;
+  }
+  #manuallyBtn{
+    font-size: x-small;
+  }
+  #backBtn{
+    width: 150px;
+    font-size: medium;
+  }
+}/* END OF 780px MAX WIDTH */
+
+
+
+
+
+
+
+@media (max-width:450px){
+  
+
+    /* ADJUST TO SCREEN 450px MAX WIDTH*/
+    /* LABELS  */
     #formLabel{
       color: brown;
       font-family: Arial;
@@ -78,6 +222,11 @@ input[type=file]{
     .taxPayerLabels{
       font-size: 11px;
     }
+
+
+
+
+    /* INPUT */
     .taxInput{
       width: 130px !important;
       position: relative;
@@ -95,9 +244,12 @@ input[type=file]{
       margin-right: 23px;
     }
 
+
+
+    /* MAIN DIVS */
     #filingStatusMainDiv{
       padding: 0%;
-      height: 600px;
+      height: 500px;
       width: 100%;
     }
     #chooseDiv{
@@ -105,15 +257,24 @@ input[type=file]{
       height: 250px;
     }
     #confirmDiv{
-      height: 600px;
-      padding: 0%;
+      padding: 15%;
     }
     #infoDiv{
       padding: 0%;
       height: 1300px;
     }
+
+
+
+    /* BUTTONS */
     #nextBtn{
-      width: 115px;
+      width: 120px;
+      font-size: x-small;
+    }
+    #confirmBtn{
+      font-size: x-small;
+    }
+    #noContinue{
       font-size: x-small;
     }
     #manuallyBtn{
@@ -123,14 +284,16 @@ input[type=file]{
       width: 100px;
       font-size: x-small;
     }
+}/* END OF 450px MAX WIDTH */
 
-  }
 
-  @media (max-width:350px){
+@media (max-width:350px){
+
+     /* ADJUST TO SCREEN 350px MAX WIDTH*/
+    /* LABELS  */
     #formLabel{
       color: brown;
-      font-family: Arial;
-      
+      font-family: Arial;    
     }
     #yesNo{
       margin-right: 7px;
@@ -146,8 +309,11 @@ input[type=file]{
     }
     .taxPayerLabels{
       
-      font-size: 11px;
+      font-size: 9px;
     }
+
+
+    /*INPUTS*/
     .taxInput{
       width: 110px !important;
       position: relative;
@@ -165,9 +331,13 @@ input[type=file]{
       margin-right: 23px;
     }
 
+
+
+
+    /*MAIN DIVS*/
     #filingStatusMainDiv{
       padding: 0%;
-      height: 600px;
+      height: 500px;
       width: 100%;
     }
     #chooseDiv{
@@ -175,16 +345,26 @@ input[type=file]{
       height: 250px;
     }
     #confirmDiv{
-      height: 600px;
-      padding: 0%;
+      padding:14%;
     }
     #infoDiv{
       padding: 0%;
       height: 1300px;
     }
+
+
+
+    /* BUTTONS */
     #nextBtn{
       width: 105px;
       font-size: xx-small;
+    }
+    #confirmBtn{
+      font-size: xx-small;
+
+    }
+    #noContinue{
+      font-size: x-small;
     }
     #manuallyBtn{
       font-size: x-small;
@@ -194,5 +374,6 @@ input[type=file]{
       font-size: xx-small;
     }
 
-  }
- 
+
+}/*END OF 350px MAX WIDTH*/
+   

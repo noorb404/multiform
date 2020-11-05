@@ -221,27 +221,27 @@ export class FilingStatus extends Component {
 
                   <Form.Row>
                  
-                  <div id="checkLabel">
-                           Can a parent (or somebody else) claim you as a dependent on their tax return?
-                  </div>
-                  <div id="checkLabelTop">
-                      <label id="yesNo">
-                        <input 
-                                  type="radio"
-                                  id="yes"
-                                  label="yes"
-                                />
-                                Yes
-                      </label>
-                      <label id="yesNo">
-                        <input 
-                                  type="radio"
-                                  id="no"
-                                  label="no"
-                                />
-                                No
-                      </label>
-                  </div>
+                      <div id="checkLabel">
+                              Can a parent (or somebody else) claim you as a dependent on their tax return?
+                      </div>
+                      <div id="checkLabelTop">
+                          <label id="yesNo">
+                            <input 
+                                      type="radio"
+                                      id="yes"
+                                      label="yes"
+                                    />
+                                    Yes
+                          </label>
+                          <label id="yesNo">
+                            <input 
+                                      type="radio"
+                                      id="no"
+                                      label="no"
+                                    />
+                                    No
+                          </label>
+                      </div>
                   </Form.Row>
 
                   <hr/>
@@ -249,109 +249,109 @@ export class FilingStatus extends Component {
                   
                   <Form.Row>
                   
-                  <div id="checkLabel">
-                  Do you want to contribute $3 to the Presidential Election Campaign Fund?
-                  </div>
-                  <div id="checkLabelTop">
-                      <label id="yesNo">
-                        <input 
-                                  type="radio"
-                                  id="yes"
-                                  label="yes"
-                                />
-                                Yes
-                      </label>
-                      <label id="yesNo">
-                        <input 
-                                  type="radio"
-                                  id="no"
-                                  label="no"
-                                />
-                                No
-                      </label>
-                  </div>
+                      <div id="checkLabel">
+                      Do you want to contribute $3 to the Presidential Election Campaign Fund?
+                      </div>
+                      <div id="checkLabelTop">
+                          <label id="yesNo">
+                            <input 
+                                      type="radio"
+                                      id="yes"
+                                      label="yes"
+                                    />
+                                    Yes
+                          </label>
+                          <label id="yesNo">
+                            <input 
+                                      type="radio"
+                                      id="no"
+                                      label="no"
+                                    />
+                                    No
+                          </label>
+                      </div>
                   
                   </Form.Row>
 
                   <hr/>
                   <Form.Row>
                   
-                  <div id="checkLabel">
-                        Is this person legally blind?
-                  </div>
-                  
-                  <div id="checkLabelTop">
-                      <label id="yesNo">
-                        <input 
-                                  type="radio"
-                                  id="yes"
-                                  label="yes"
-                                />
-                                Yes
-                      </label>
-                      <label id="yesNo">
-                        <input 
-                                  type="radio"
-                                  id="no"
-                                  label="no"
-                                />
-                                No
-                      </label>
-                  </div>
+                      <div id="checkLabel">
+                            Is this person legally blind?
+                      </div>
+                      
+                      <div id="checkLabelTop">
+                          <label id="yesNo">
+                            <input 
+                                      type="radio"
+                                      id="yes"
+                                      label="yes"
+                                    />
+                                    Yes
+                          </label>
+                          <label id="yesNo">
+                            <input 
+                                      type="radio"
+                                      id="no"
+                                      label="no"
+                                    />
+                                    No
+                          </label>
+                      </div>
                   </Form.Row>
 
                   <hr/>
                   <Form.Row>
                   
-                  <div id="checkLabel">
-                  Has this person passed away before the filing of this tax return?
-                  </div>
-                  <div id="checkLabelTop">
-                      <label id="yesNo">
-                        <input 
-                                  type="radio"
-                                  id="yes"
-                                  label="yes"
-                                />
-                                Yes
-                      </label>
-                      <label id="yesNo">
-                        <input 
-                                  type="radio"
-                                  id="no"
-                                  label="no"
-                                />
-                                No
-                      </label>
-                  </div>
+                      <div id="checkLabel">
+                      Has this person passed away before the filing of this tax return?
+                      </div>
+                      <div id="checkLabelTop">
+                          <label id="yesNo">
+                            <input 
+                                      type="radio"
+                                      id="yes"
+                                      label="yes"
+                                    />
+                                    Yes
+                          </label>
+                          <label id="yesNo">
+                            <input 
+                                      type="radio"
+                                      id="no"
+                                      label="no"
+                                    />
+                                    No
+                          </label>
+                      </div>
                   
                   </Form.Row>
 
                   <hr/>
                   <Form.Row>
                  
-                  <div id="checkLabel">
-                        Were you impacted by a qualified disaster in 2019?
-                  </div>
-                  <div id="checkLabelTop">
-                      <label id="yesNo">
-                        <input 
-                                  type="radio"
-                                  id="yes"
-                                  label="yes"
-                                />
-                                Yes
-                      </label>
-                      <label id="yesNo">
-                        <input 
-                                  type="radio"
-                                  id="no"
-                                  label="no"
-                                />
-                                No
-                      </label>
-                  </div>
-                  
+                      <div id="checkLabel">
+                            Were you impacted by a qualified disaster in 2019?
+                      </div>
+                      <div id="checkLabelTop">
+                          <label id="yesNo">
+                            <input 
+                                      type="radio"
+                                      id="yes"
+                                      label="yes"
+                                    />
+                                    Yes
+                          </label>
+                          <label id="yesNo">
+                            <input 
+                                      type="radio"
+                                      id="no"
+                                      label="no"
+                                    />
+                                    No
+                          </label>
+                      </div>
+                      
                   </Form.Row>
                     <hr />
                     <Form.Group>

@@ -20,14 +20,14 @@ const DependentAsk = props =>{
  
 
         return (
-            <div id="confirmDiv" className="form-container">
+            <div id="dependentDivAsk" className="form-container">
             <Container>
                 <div id="formLabel" className="text-center">Dependents and Qualifying Children</div>
                 <hr/>
                <Form>
                    
                    <Form.Row>  
-                        <label>Do you have any dependents or qualifying children?</label>
+                        <div style={{width:'100%'}}><label>Do you have any dependents or qualifying children?</label></div>
                         <label style={{fontSize:'small', color:'gray'}}>If you aren't sure if someone qualifies, answer Yes and we'll help you figure it out.</label>
 
                    </Form.Row>
@@ -36,7 +36,7 @@ const DependentAsk = props =>{
           
                          
                          <Button className="float-left" id="backBtn" onClick={back}>Previous Page</Button>
-                         <Button  className="float-right"  id="nextBtn" onClick={no} type="submit">No, Continue</Button>
+                         <Button  className="float-right"  id="noContinue" onClick={no} type="submit">No, Continue</Button>
                          <Button style={{marginRight:'2px'}} className="float-right" id="manuallyBtn" onClick={yes}>Yes</Button>
                        
                    
