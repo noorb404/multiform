@@ -207,7 +207,7 @@ export class FilingStatus extends Component {
                         <Form.Control 
                           type="text"
                           required
-                          className="taxInput"
+                          className="taxInput3"
                           name="zip"
                           onChange={inputChange('zip')}
                           value={values.zip}
