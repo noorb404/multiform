@@ -21,8 +21,8 @@ const Choose = props =>{
  
 
         return (
-            <div id="confirmDiv" className="form-container">
-            <Container>
+            <div  id="confirmDiv" className="form-container">
+            <Container style={{width:'100%'}}>
                 <div id="formLabel" className="text-center">Choose a way of identification</div>
                 <hr/>
                <Form>
