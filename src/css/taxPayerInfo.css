@@ -30,11 +30,9 @@
     }
     .taxInput{
       width: 130px !important;
-      position: relative;
       margin-right: 15px;
       padding-bottom: 50px;
       height: 30px !important;
-      font-size: x-small;
     }
     .taxInput2{
       margin-right: 23px;
