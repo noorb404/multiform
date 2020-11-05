@@ -1,21 +1,4 @@
-#formLabel{
-    color: brown;
-    font-size: x-large;
-    font-family: Arial;
-  }
-  #confirmDiv{
-    padding: 7%;
-  }
-  #chooseDiv{
-    padding: 7%;
-  }
-  #infoDiv{
-    padding: 5%;
-  }
-  #filingStatusMainDiv{
-    padding: 5%;
-  }
-  @media (max-width:400px){
+@media (max-width:400px){
     #formLabel{
       color: brown;
       font-size: large;
@@ -30,9 +13,11 @@
     }
     .taxInput{
       width: 130px !important;
+      height: 30px !important;
+      max-height: 30px !important;
       margin-right: 15px;
       padding-bottom: 50px;
-      height: 30px !important;
+  
     }
     .taxInput2{
       margin-right: 23px;
@@ -68,23 +53,32 @@
     }
 
   }
+
+  #formLabel{
+    color: brown;
+    font-size: x-large;
+    font-family: Arial;
+  }
+
   hr{
     padding-bottom: 1%;
   }
+
   #filingLabel{
     font-size: large;
     font-family: Arial;
     padding: 2%;
   }
+
+
   #backBtn{
     background-color: white;
     color: rgb(0, 102, 255);
     border: 1px solid rgb(0, 102, 255);;
   }
-label{
-    font-size: medium;
-    font-family: Arial;
-  }
+
+
+
   input[type=radio] {
     height:20px; 
     margin-top: -1px;
@@ -92,15 +86,18 @@ label{
     width:20px; 
     vertical-align: middle;
   }
-  input[type=file]{
-    color: rgb(0, 81, 255);
-  }
+
+
+
   #confirmlb{
     color: rgb(39, 202, 80);
     margin-left: 5px;
     padding-top: 2%;
     font-size: x-large;
   }
+
+
+
   #heavyHr{
     border: none;
     height: 1px;
@@ -108,4 +105,16 @@ label{
     /* Set the hr color */
     color: rgb(180, 180, 180); /* old IE */
     background-color: rgb(180, 180, 180);
+  }
+  #confirmDiv{
+    padding: 7%;
+  }
+  #chooseDiv{
+    padding: 7%;
+  }
+  #infoDiv{
+    padding: 5%;
+  }
+  #filingStatusMainDiv{
+    padding: 5%;
   }
