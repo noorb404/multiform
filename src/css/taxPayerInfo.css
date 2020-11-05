@@ -6,6 +6,9 @@
   #confirmDiv{
     padding: 7%;
   }
+  #chooseDiv{
+    padding: 7%;
+  }
   #infoDiv{
     padding: 5%;
   }
@@ -13,10 +16,38 @@
     padding: 5%;
   }
   @media (max-width:400px){
+    #formLabel{
+      color: brown;
+      font-size: large;
+      font-family: Arial;
+    }
+    .chooseLabels{
+     font-size: small; 
+    }
+    .taxPayerLabels{
+      
+      font-size: 11px;
+    }
+    .taxInput{
+      width: 130px !important;
+      position: relative;
+      margin-right: 15px;
+      padding-bottom: 50px;
+      height: 30px !important;
+      font-size: x-small;
+    }
+    .taxInput2{
+      margin-right: 23px;
+    }
+
     #filingStatusMainDiv{
       padding: 0%;
       height: 600px;
       width: 100%;
+    }
+    #chooseDiv{
+      padding: 0%;
+      height: 250px;
     }
     #confirmDiv{
       height: 600px;
@@ -24,23 +55,21 @@
     }
     #infoDiv{
       padding: 0%;
-      height: 1750px;
+      height: 1000px;
     }
     #nextBtn{
-      width: 120px;
-      
-      font-size: x-small;
+      width: 105px;
+      font-size: xx-small;
     }
     #manuallyBtn{
       font-size: x-small;
     }
     #backBtn{
-      width: 110px;
-      font-size: x-small;
+      width: 90px;
+      font-size: xx-small;
     }
 
   }
-
   hr{
     padding-bottom: 1%;
   }

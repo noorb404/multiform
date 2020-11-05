@@ -21,30 +21,33 @@ const Choose = props =>{
  
 
         return (
-            <div  id="confirmDiv" className="form-container">
+            <div  id="chooseDiv" className="form-container">
             <Container style={{width:'100%'}}>
-                <div id="formLabel" className="text-center">Choose a way of identification</div>
+                <div id="formLabel" className="text-center">Identification</div>
                 <hr/>
                <Form>
-                   <label>Upload last year PDF file:</label>
-                   <Form.Row>  
-                  
-                   <Button id="manuallyBtn" style={{backgroundColor:'white', color:'black' , border:'0'}} onClick={handleClick}>
-                        Upload a file
-                    </Button>
-                    <input
-                        type="file"
-                        ref={hiddenFileInput}
-                        onChange={onChangeHandler}
-                        style={{display: 'none'}}
-                    />   
-                   </Form.Row>
-                   
+                   <Form.Group>
+                        <label className="chooseLabels">Upload last year PDF file:</label>
+                        <Form.Row>  
+                        
+                        <Button id="manuallyBtn" style={{backgroundColor:'white', color:'black' , border:'0'}} onClick={handleClick}>
+                                Upload a file
+                            </Button>
+                            <input
+                                type="file"
+                                ref={hiddenFileInput}
+                                onChange={onChangeHandler}
+                                style={{display: 'none'}}
+                            />   
+                        </Form.Row>
+                   </Form.Group>
+
                     <hr/>
-                    <label>Or you can manually fill out your info:</label>
-                   <Form.Row>
-                        <Button className="float-right" id="manuallyBtn" onClick={onContinue}>Fill your information manually</Button>
-                   </Form.Row>
+                    <Form.Group>
+                        <label className="chooseLabels">Or you can manually fill out your info:</label>
+                        <Button className="float-right" id="manuallyBtn" onClick={onContinue}>Fill your information manually</Button>      
+                    </Form.Group>
+                
                    
                 
                 </Form>

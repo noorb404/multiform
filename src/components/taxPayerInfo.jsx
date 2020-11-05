@@ -47,21 +47,22 @@ export class FilingStatus extends Component {
               <hr />
                   <Form noValidate validated={this.state.Validated} onSubmit={this.handleSubmit}>
                     <Form.Row>
-                          <Form.Group as={Col} md="5" controlId="FirstName">
-                            <Form.Label>First name:</Form.Label>
+                          <Form.Group  className="taxInput"  as={Col} md="5" controlId="FirstName">
+                            <Form.Label className="taxPayerLabels">First name:</Form.Label>
                             <Form.Control
                               required
                               name="firstName"
                               onChange={inputChange('firstName')} 
                               value={values.firstName}
                               type="text"
+                              className="taxInput"
         
                             />
                           </Form.Group>
-                          <Form.Group as={Col} md="4" controlId="MiddleInitial">
-                            <Form.Label>Middle Initial:</Form.Label>
+                          <Form.Group  className="taxInput" as={Col} md="4" controlId="MiddleInitial">
+                            <Form.Label className="taxPayerLabels">Middle Initial:</Form.Label>
                             <Form.Control
-                    
+                              className="taxInput"
                               name="middleInitial"
                               onChange={inputChange('middleInitial')}
                               value={values.middleInitial}
@@ -72,20 +73,22 @@ export class FilingStatus extends Component {
 
 
                     <Form.Row>
-                          <Form.Group as={Col} md="5" controlId="LastName">
-                            <Form.Label>Last name:</Form.Label>
+                          <Form.Group className="taxInput" as={Col} md="5" controlId="LastName">
+                            <Form.Label className="taxPayerLabels">Last name:</Form.Label>
                             <Form.Control
                               required
+                              className="taxInput"
                               name="lastName"
                               onChange={inputChange('lastName')}
                               value={values.lastName}
                               type="text"
                             />
                           </Form.Group>
-                          <Form.Group as={Col} md="4" controlId="Occupation">
-                            <Form.Label>Occupation:</Form.Label>
+                          <Form.Group className="taxInput" as={Col} md="4" controlId="Occupation">
+                            <Form.Label className="taxPayerLabels">Occupation:</Form.Label>
                             <Form.Control
                               required
+                              className="taxInput"
                               name="occupation"
                               onChange={inputChange('occupation')}
                               value={values.occupation}
@@ -96,20 +99,22 @@ export class FilingStatus extends Component {
 
 
                     <Form.Row>
-                          <Form.Group as={Col} md="5" controlId="SocialId">
-                            <Form.Label>Social Security Number:</Form.Label>
+                          <Form.Group className="taxInput" as={Col} md="5" controlId="SocialId">
+                            <Form.Label className="taxPayerLabels">Social Security Number:</Form.Label>
                             <Form.Control
                               required
+                              className="taxInput"
                               name="socialId"
                               onChange={inputChange('socialId')}
                               value={values.socialId}
                               type="text"
                             />
                           </Form.Group>
-                          <Form.Group as={Col} md="4" controlId="Birth">
-                            <Form.Label>Date of Birth:</Form.Label>
+                          <Form.Group className="taxInput" as={Col} md="4" controlId="Birth">
+                            <Form.Label className="taxPayerLabels">Date of Birth:</Form.Label>
                             <Form.Control
                               required
+                              className="taxInput"
                               name="birth"
                               onChange={inputChange('birth')}
                               value={values.birth}
@@ -118,11 +123,11 @@ export class FilingStatus extends Component {
                           </Form.Group>
                     </Form.Row>
 
-                    <Form.Row>
-                        <Form.Group controlId="exampleForm.SelectCustom">
-                          <Form.Label>Jr., Sr., III:</Form.Label>
+              
+                        <Form.Group className="taxInput2" controlId="exampleForm.SelectCustom">
+                          <Form.Label className="taxPayerLabels">Jr., Sr., III:</Form.Label>
                           <Form.Control as="select" custom>
-                            <option disabled selected>Choose an option</option>
+                            <option disabled selected></option>
                             <option>JR</option>
                             <option>SR</option>
                             <option>II</option>
@@ -132,15 +137,16 @@ export class FilingStatus extends Component {
                             <option>VI</option>
                           </Form.Control>
                         </Form.Group>
-                    </Form.Row>
+         
 
                     <hr />
 
                     <Form.Row>
-                          <Form.Group as={Col} md="5" controlId="streetAddress">
-                            <Form.Label>Street Address:</Form.Label>
+                          <Form.Group className="taxInput" as={Col} md="5" controlId="streetAddress">
+                            <Form.Label className="taxPayerLabels">Street Address:</Form.Label>
                             <Form.Control
                              type="text"
+                             className="taxInput"
                               required
                               name="streetAddress"
                               onChange={inputChange('streetAddress')}
@@ -151,11 +157,12 @@ export class FilingStatus extends Component {
                             </Form.Control.Feedback>
                           </Form.Group>
 
-                          <Form.Group as={Col} md="4" controlId="Aptno">
-                            <Form.Label>Apt No:</Form.Label>
+                          <Form.Group className="taxInput" as={Col} md="4" controlId="Aptno">
+                            <Form.Label className="taxPayerLabels">Apt No:</Form.Label>
                             <Form.Control 
                               type="number"            
                               name="aptNo"
+                              className="taxInput"
                               onChange={inputChange('aptNo')}
                               value={values.aptNo}
                               />
@@ -167,10 +174,11 @@ export class FilingStatus extends Component {
 
 
                     <Form.Row>
-                      <Form.Group as={Col} md="4" controlId="City">
-                        <Form.Label>City:</Form.Label>
+                      <Form.Group className="taxInput" as={Col} md="4" controlId="City">
+                        <Form.Label className="taxPayerLabels">City:</Form.Label>
                         <Form.Control 
                           type="text"
+                          className="taxInput"
                           required 
                           name="city"
                           onChange={inputChange('city')}
@@ -181,11 +189,12 @@ export class FilingStatus extends Component {
                         </Form.Control.Feedback>
                       </Form.Group>
 
-                      <Form.Group as={Col} md="3" controlId="State">
-                        <Form.Label>State:</Form.Label>
+                      <Form.Group className="taxInput" as={Col} md="3" controlId="State">
+                        <Form.Label className="taxPayerLabels">State:</Form.Label>
                         <Form.Control 
                           type="text"
                           required
+                          className="taxInput"
                           name="state"
                           onChange={inputChange('state')}
                           value={values.state}
@@ -195,11 +204,12 @@ export class FilingStatus extends Component {
                         </Form.Control.Feedback>
                       </Form.Group>
 
-                      <Form.Group as={Col} md="2" controlId="Zip">
-                        <Form.Label>Zip:</Form.Label>
+                      <Form.Group className="taxInput" as={Col} md="2" controlId="Zip">
+                        <Form.Label className="taxPayerLabels">Zip:</Form.Label>
                         <Form.Control 
                           type="text"
                           required
+                          className="taxInput"
                           name="zip"
                           onChange={inputChange('zip')}
                           value={values.zip}
