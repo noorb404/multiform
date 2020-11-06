@@ -154,8 +154,8 @@ export class Dependent extends Component {
 
                     <hr />
 
-                    <Button className="float-right"  id="nextBtn" type="submit">Save and Continue</Button>
-                    <Button className="float-left" id="backBtn" onClick={this.back}>Cancel</Button>
+                    <Button id="nextBtn" type="submit">Save and Continue</Button>
+                    <Button id="backBtn" onClick={this.back}>Cancel</Button>
                   </Form>
                 </Container>
             </div>

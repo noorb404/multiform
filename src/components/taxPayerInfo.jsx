@@ -388,8 +388,8 @@ export class FilingStatus extends Component {
                         
                         
                     </Form.Row>
-                    <Button className="float-right"  id="nextBtn" type="submit">Save and Continue</Button>
-                    <Button className="float-left" id="backBtn" onClick={this.back}>Previous Page</Button>
+                    <Button   id="nextBtn" type="submit">Save and Continue</Button>
+                    <Button  id="backBtn" onClick={this.back}>Previous Page</Button>
                   </Form>
                 </Container>
             </div>

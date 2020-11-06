@@ -34,10 +34,10 @@ const DependentAsk = props =>{
                    
                     <hr/>
           
+                         <Button  id="nextBtn" onClick={no} type="submit">No, Continue</Button>
+                         <Button  id="yesBtn" onClick={yes}>Yes</Button>
+                         <Button  id="backBtn" onClick={back}>Previous Page</Button>
                          
-                         <Button className="float-left" id="backBtn" onClick={back}>Previous Page</Button>
-                         <Button  className="float-right"  id="noContinue" onClick={no} type="submit">No, Continue</Button>
-                         <Button style={{marginRight:'2px'}} className="float-right" id="manuallyBtn" onClick={yes}>Yes</Button>
                        
                    
                 

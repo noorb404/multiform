@@ -103,9 +103,9 @@ export class Confirm extends Component {
                         </div>
                     )
                      :  null }
-
-                    <Button className="float-right" id="confirmBtn" onClick={this.continue}>Confirm</Button>
-                    <Button className="float-left" id="backBtn" onClick={this.back}>Previous Page</Button>
+                    <hr />
+                    <Button  id="confirmBtn" onClick={this.continue}>Confirm</Button>
+                    <Button id="backBtn" onClick={this.back}>Previous Page</Button>
                 </Form>
             </Container>
             </div>

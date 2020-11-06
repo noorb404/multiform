@@ -2,7 +2,7 @@
 /*  MAIN DIVS FOR FORM PAGES  */
 
 #confirmDiv{
-  padding: 7%;
+  padding: 12%;
 }
 #chooseDiv{
   padding: 5%;
@@ -107,12 +107,31 @@ hr{
 
 
 
-/*   <-- PREV PAGE BUTTON   */
+/*    BUTTON   */
 #backBtn{
   background-color: white;
   color: rgb(0, 102, 255);
-  border: 1px solid rgb(0, 102, 255);;
+  border: 1px solid rgb(0, 102, 255);
+  float: left;
+  width: 150px;
+  font-size: medium;
 }
+#nextBtn{
+  width: 180px;
+  font-size: medium;
+  float:right;
+}
+#confirmBtn{
+  float: right;
+  width: 120px;
+  font-size: medium;
+}
+#yesBtn{
+  float: right;
+  margin-right: 5px;
+  font-size: medium;
+}
+
 
 
 /*  INPUT  - RADIO & FILE  */
@@ -236,12 +255,13 @@ input[type=file]{
   }
   #confirmDiv{
 
-    padding: 10%;
+    padding: 13%;
   }
   #infoDiv{
     padding: 0%;
     height: 1300px;
   }
+  
 
 
 
@@ -249,18 +269,26 @@ input[type=file]{
   #nextBtn{
     width: 180px;
     font-size: medium;
+    margin-top: 0% !important;
+    float:right;
   }
   #confirmBtn{
+    float: right;
+    width: 120px;
     font-size: medium;
   }
-  #noContinue{
-    font-size: x-small;
+  #yesBtn{
+    float: right;
+    margin-right: 5px;
+    font-size: medium;
   }
   #manuallyBtn{
     font-size: x-small;
   }
   #backBtn{
+    float: left;
     width: 150px;
+    margin-top: 0% !important;
     font-size: medium;
   }
 }/* END OF 780px MAX WIDTH */
@@ -288,7 +316,7 @@ input[type=file]{
     padding-bottom: 10px;
   }
   .chooseLabels{
-   font-size: small; 
+   font-size: medium; 
   }
   .taxPayerLabels{
     font-size: 14px;
@@ -357,46 +385,65 @@ input[type=file]{
   /* MAIN DIVS */
   #filingStatusMainDiv{
     padding: 0%;
-    height: 500px;
+    height: 550px;
     width: 100%;
   }
   #chooseDiv{
     padding: 0%;
-    height: 250px;
+    height: 300px;
   }
   #confirmDiv{
     padding: 15%;
   }
   #infoDiv{
     padding: 0%;
-    height: 1650px;
+    height: 1700px;
   }
   #dependentDiv{
-    height: 700px;
+    height: 770px;
   }
   #spouseDiv{
-    height: 1150px;
+    height: 1260px;
+  }
+  #dependentDivAsk{
+    height: 450px;
   }
   
 
 
   /* BUTTONS */
   #nextBtn{
-    width: 140px;
-    font-size: small;
+    width: 95%;
+    margin-top: 3% !important;
+    margin-left: 2%;
+    float: none;
+    font-size: medium;
   }
   #confirmBtn{
-    font-size: small;
+    width: 95%;
+    margin-top: 5%;
+    margin-left: 2%;
+    float: none !important;
+    font-size: medium;
+
   }
-  #noContinue{
-    font-size: x-small;
+  #yesBtn{
+    margin-top: 5% !important;
+    margin-left: 2%;
+    width: 95%;
+    float: none;
+    font-size: medium;
   }
   #manuallyBtn{
-    font-size: x-small;
+    width: 100%;
+    font-size: medium;
   }
   #backBtn{
-    width: 120px;
-    font-size: small;
+     width: 95%;
+     margin-top: 3% !important;
+     margin-left: 2%;
+     float: none;
+    font-size: medium;
   }
 }/* END OF 600px MAX WIDTH */
 
@@ -424,7 +471,7 @@ input[type=file]{
       padding-bottom: 10px;
     }
     .chooseLabels{
-     font-size: small; 
+     font-size: medium; 
     }
     .taxPayerLabels{
       font-size: 14px;
@@ -496,47 +543,68 @@ input[type=file]{
     /* MAIN DIVS */
     #filingStatusMainDiv{
       padding: 0%;
-      height: 500px;
+      height: 550px;
       width: 100%;
     }
     #chooseDiv{
       padding: 0%;
-      height: 250px;
+      height: 300px;
     }
     #confirmDiv{
       padding: 15%;
     }
     #infoDiv{
       padding: 0%;
-      height: 1650px;
+      height: 1700px;
     }
     #dependentDiv{
-      height: 700px;
+      height: 760px;
     }
     #spouseDiv{
-      height: 1200px;
+      height: 1270px;
     }
+    #dependentDivAsk{
+      height: 450px;
+    }
+    
     
 
 
     /* BUTTONS */
     #nextBtn{
-      width: 140px;
-      font-size: small;
+      width: 95%;
+      margin-top: 5% !important;
+      margin-left: 2%;
+      font-size: medium;
+      float: none;
     }
     #confirmBtn{
-      font-size: small;
+      width: 95%;
+      margin-top: 5%;
+      margin-left: 2%;
+      float: none;
+      font-size: medium;
+
     }
-    #noContinue{
-      font-size: x-small;
+    #yesBtn{
+      margin-top: 5% !important;
+      margin-left: 2%;
+      width: 95%;
+      float: none;
+      font-size: medium;
     }
     #manuallyBtn{
-      font-size: x-small;
+      width: 100%;
+      font-size: medium;
     }
     #backBtn{
-      width: 120px;
-      font-size: small;
+       width: 95%;
+       margin-top: 5% !important;
+       margin-left: 2%;
+      font-size: medium;
+      float: none;
     }
+
 }/* END OF 450px MAX WIDTH */
 
 
@@ -636,7 +704,7 @@ input[type=file]{
     /*MAIN DIVS*/
     #filingStatusMainDiv{
       padding: 0%;
-      height: 500px;
+      height: 550px;
       width: 100%;
     }
     #chooseDiv{
@@ -648,29 +716,52 @@ input[type=file]{
     }
     #infoDiv{
       padding: 0%;
-      height: 1600px;
+      height: 1650px;
     }
-
+    #spouseDiv{
+      height: 1230px ;
+    }
+    #dependentDiv{
+      height: 750px;
+    }
+    #dependentDivAsk{
+      height: 400px;
+    }
 
 
     /* BUTTONS */
     #nextBtn{
-      width: 115px;
-      font-size: x-small;
+      width: 95%;
+      margin-top: 5% !important;
+      margin-left: 2%;
+      float: none;
+      font-size: small;
     }
     #confirmBtn{
-      font-size: xx-small;
+      width: 95%;
+      margin-top: 5%;
+      margin-left: 2%;
+      float: none;
+      font-size: small;
 
     }
-    #noContinue{
-      font-size: x-small;
+    #yesBtn{
+      margin-top: 5% !important;
+      margin-left: 2%;
+      width: 95%;
+      float: none;
+      font-size: small;
     }
     #manuallyBtn{
-      font-size: x-small;
+      width: 100%;
+      font-size: small;
     }
     #backBtn{
-      width: 100px;
-      font-size: x-small;
+       width: 95%;
+       margin-top: 5% !important;
+       margin-left: 2%;
+      font-size: small;
+      float: none;
     }
 
 
