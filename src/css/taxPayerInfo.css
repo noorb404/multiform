@@ -45,6 +45,32 @@
   padding-top: 2%;
   font-size: x-large;
 }
+#confirmlb{
+  font-size: large;
+  text-transform: uppercase;
+}
+#confirmLabels{
+  font-size: medium;
+}
+.confirmIdLabels{
+  font-weight:bold;
+  color:gray;
+  margin-left:5px;
+  padding-right:10px;
+  font-size: 15px;
+}
+.confirmIdLabelsAnswer{
+  font-weight:500;
+  margin-left:5px;
+  padding-right:10px;
+  font-size: 15px;
+}
+#agreeCheckboxLabel{
+  display: block;
+  padding-left: 15px;
+  text-indent: -15px;
+  font-size: 13px;
+}
 
 
 
@@ -99,7 +125,17 @@ input[type=radio] {
 input[type=file]{
   color: rgb(0, 81, 255);
 }
-
+#agreeCheckbox{
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  margin:0;
+  vertical-align: bottom;
+  position: relative;
+  top: -1px;
+  right: 2px;
+ 
+}
 
 
 
@@ -127,6 +163,26 @@ input[type=file]{
   .taxPayerLabels{
     font-size: 13px;
   }
+  #confirmlb{
+    font-size: large;
+    text-transform: uppercase;
+  }
+  #confirmLabels{
+    font-size: medium;
+  }
+  .confirmIdLabels{
+    font-weight:bold;
+    color:gray;
+    margin-left:5px;
+    padding-right:10px;
+    font-size: 15px;
+  }
+  .confirmIdLabelsAnswer{
+    font-weight:500;
+    margin-left:5px;
+    padding-right:10px;
+    font-size: 15px;
+  }
 
 
 
@@ -149,7 +205,23 @@ input[type=file]{
     margin-right: 23px;
   }
 
-
+  #agreeCheckboxLabel{
+    display: block;
+    padding-left: 15px;
+    text-indent: -15px;
+    font-size: 13px;
+  }
+  #agreeCheckbox{
+    width: 16px;
+    height: 16px;
+    padding: 0;
+    margin:0;
+    vertical-align: bottom;
+    position: relative;
+    top: -1px;
+    right: 2px;
+   
+  }
 
   /* MAIN DIVS */
   #filingStatusMainDiv{
@@ -221,7 +293,44 @@ input[type=file]{
     font-size: 14px;
   }
 
+  #agreeCheckboxLabel{
+    display: block;
+    padding-left: 15px;
+    text-indent: -15px;
+    font-size: 12px;
+  }
+  #agreeCheckbox{
+    width: 15px;
+    height: 15px;
+    padding: 0;
+    margin:0;
+    vertical-align: bottom;
+    position: relative;
+    top: -1px;
+    right: 2px;
+   
+  }
 
+  #confirmlb{
+    font-size: medium;
+    text-transform: uppercase;
+  }
+  #confirmLabels{
+    font-size: small;
+  }
+  .confirmIdLabels{
+    font-weight:bold;
+    color:gray;
+    margin-left:5px;
+    padding-right:10px;
+    font-size: 13px;
+  }
+  .confirmIdLabelsAnswer{
+    font-weight:500;
+    margin-left:5px;
+    padding-right:10px;
+    font-size: 13px;
+  }
 
 
   /* INPUT */
@@ -276,7 +385,7 @@ input[type=file]{
     font-size: small;
   }
   #confirmBtn{
-    font-size: x-small;
+    font-size: small;
   }
   #noContinue{
     font-size: x-small;
@@ -319,6 +428,46 @@ input[type=file]{
     .taxPayerLabels{
       font-size: 14px;
     }
+    #confirmlb{
+      font-size: medium;
+      text-transform: uppercase;
+    }
+    #confirmLabels{
+      font-size: small;
+    }
+    .confirmIdLabels{
+      font-weight:bold;
+      color:gray;
+      margin-left:5px;
+      padding-right:10px;
+      font-size: 13px;
+    }
+    .confirmIdLabelsAnswer{
+      font-weight:500;
+      margin-left:5px;
+      padding-right:10px;
+      font-size: 13px;
+    }
+    #agreeCheckboxLabel{
+      display: block;
+      padding-left: 15px;
+      text-indent: -15px;
+      font-size: 11px;
+    }
+    #agreeCheckbox{
+      width: 13px;
+      height: 13px;
+      padding: 0;
+      margin:0;
+      vertical-align: bottom;
+      position: relative;
+      top: -1px;
+      right: 2px;
+     
+    }
+
+
+
 
 
 
@@ -375,7 +524,7 @@ input[type=file]{
       font-size: small;
     }
     #confirmBtn{
-      font-size: x-small;
+      font-size: small;
     }
     #noContinue{
       font-size: x-small;
@@ -396,10 +545,29 @@ input[type=file]{
     /* LABELS  */
     #formLabel{
       color: brown;
-      font-family: Arial;    
+      font-family: Arial;  
+      font-size: large;  
+      margin-top: 10px
     }
     #yesNo{
       margin-right: 7px;
+    }
+    #agreeCheckboxLabel{
+      display: block;
+      padding-left: 15px;
+      text-indent: -15px;
+      font-size: 11px;
+    }
+    #agreeCheckbox{
+      width: 13px;
+      height: 13px;
+      padding: 0;
+      margin:0;
+      vertical-align: bottom;
+      position: relative;
+      top: -1px;
+      right: 2px;
+     
     }
     #checkLabel{
       font-size: 14px;
@@ -411,9 +579,36 @@ input[type=file]{
      font-size: small; 
     }
     .taxPayerLabels{
-      
-      font-size: 9px;
+      font-size: 13px;
     }
+    #filingStatusRadioLabels{
+      font-size: 13px;
+    }
+    #filingLabel{
+      font-size: 15px;
+    }
+    #confirmlb{
+      font-size: medium;
+      text-transform: uppercase;
+    }
+    #confirmLabels{
+      font-size: small;
+    }
+    .confirmIdLabels{
+      font-weight:bold;
+      color:gray;
+      margin-left:5px;
+      padding-right:10px;
+      font-size: 11px;
+    }
+    .confirmIdLabelsAnswer{
+      font-weight:500;
+      margin-left:5px;
+      padding-right:10px;
+      font-size: 11px;
+    }
+
+
 
 
     /*INPUTS*/
@@ -459,8 +654,8 @@ input[type=file]{
 
     /* BUTTONS */
     #nextBtn{
-      width: 105px;
-      font-size: xx-small;
+      width: 115px;
+      font-size: x-small;
     }
     #confirmBtn{
       font-size: xx-small;
@@ -473,8 +668,8 @@ input[type=file]{
       font-size: x-small;
     }
     #backBtn{
-      width: 90px;
-      font-size: xx-small;
+      width: 100px;
+      font-size: x-small;
     }
 
 

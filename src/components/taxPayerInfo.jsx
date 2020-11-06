@@ -8,17 +8,27 @@ export class FilingStatus extends Component {
 
    state = {
        Validated : false,
-       radio:0
+       radio1:0,
+       radio2:0,
+       radio3:0,
+       radio4:0,
+       radio5:0,
+
    };
 
 
-  onCheck = (nr) => () => {
+  onCheck1 = (nr) => () => {
     this.setState({
-      radio: nr 
+      [nr]: 1 
     });
-    
-    
   }
+  onCheck2 = (nr) => () => {
+    this.setState({
+      [nr]: 0
+    });
+  }
+    
+    
   //check if the form validation .. TODO check birthday +18 
   handleSubmit = (event) => {
     const form = event.currentTarget;
@@ -229,7 +239,8 @@ export class FilingStatus extends Component {
                             <input 
                                       type="radio"
                                       id="yes"
-                                      label="yes"
+                                      onClick={this.onCheck1("radio1")}
+                                      checked={this.state.radio1===1 ? true : false}
                                     />
                                     Yes
                           </label>
@@ -237,7 +248,8 @@ export class FilingStatus extends Component {
                             <input 
                                       type="radio"
                                       id="no"
-                                      label="no"
+                                      onClick={this.onCheck2("radio1")}
+                                      checked={this.state.radio1===0 ? true : false}
                                     />
                                     No
                           </label>
@@ -257,7 +269,8 @@ export class FilingStatus extends Component {
                             <input 
                                       type="radio"
                                       id="yes"
-                                      label="yes"
+                                      onClick={this.onCheck1("radio2")}
+                                      checked={this.state.radio2===1 ? true : false}
                                     />
                                     Yes
                           </label>
@@ -265,7 +278,8 @@ export class FilingStatus extends Component {
                             <input 
                                       type="radio"
                                       id="no"
-                                      label="no"
+                                      onClick={this.onCheck2("radio2")}
+                                      checked={this.state.radio2===0 ? true : false}
                                     />
                                     No
                           </label>
@@ -285,7 +299,8 @@ export class FilingStatus extends Component {
                             <input 
                                       type="radio"
                                       id="yes"
-                                      label="yes"
+                                      onClick={this.onCheck1("radio3")}
+                                      checked={this.state.radio3===1 ? true : false}
                                     />
                                     Yes
                           </label>
@@ -293,7 +308,8 @@ export class FilingStatus extends Component {
                             <input 
                                       type="radio"
                                       id="no"
-                                      label="no"
+                                      onClick={this.onCheck2("radio3")}
+                                      checked={this.state.radio3===0 ? true : false}
                                     />
                                     No
                           </label>
@@ -311,7 +327,8 @@ export class FilingStatus extends Component {
                             <input 
                                       type="radio"
                                       id="yes"
-                                      label="yes"
+                                      onClick={this.onCheck1("radio4")}
+                                      checked={this.state.radio4===1 ? true : false}
                                     />
                                     Yes
                           </label>
@@ -319,7 +336,8 @@ export class FilingStatus extends Component {
                             <input 
                                       type="radio"
                                       id="no"
-                                      label="no"
+                                      onClick={this.onCheck2("radio4")}
+                                      checked={this.state.radio4===0 ? true : false}
                                     />
                                     No
                           </label>
@@ -338,7 +356,8 @@ export class FilingStatus extends Component {
                             <input 
                                       type="radio"
                                       id="yes"
-                                      label="yes"
+                                      onClick={this.onCheck1("radio5")}
+                                      checked={this.state.radio5===1 ? true : false}
                                     />
                                     Yes
                           </label>
@@ -346,7 +365,8 @@ export class FilingStatus extends Component {
                             <input 
                                       type="radio"
                                       id="no"
-                                      label="no"
+                                      onClick={this.onCheck2("radio5")}
+                                      checked={this.state.radio5===0 ? true : false}
                                     />
                                     No
                           </label>
@@ -354,13 +374,20 @@ export class FilingStatus extends Component {
                       
                   </Form.Row>
                     <hr />
-                    <Form.Group>
-                      <Form.Check
-                        required
-                        label="Agree to terms and conditions"
-                        feedback="You must agree before submitting."
-                      />
-                    </Form.Group>
+              
+                    <Form.Row>
+                        <div id="checkLabelTop">
+                            <label id="agreeCheckboxLabel">
+                              <input 
+                                        type="checkbox"
+                                        id="agreeCheckbox"
+                                      />
+                                      Agree to terms and conditions
+                            </label>
+                        </div>
+                        
+                        
+                    </Form.Row>
                     <Button className="float-right"  id="nextBtn" type="submit">Save and Continue</Button>
                     <Button className="float-left" id="backBtn" onClick={this.back}>Previous Page</Button>
                   </Form>

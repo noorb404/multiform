@@ -42,38 +42,38 @@ export class FilingStatus extends Component {
                 <hr />
                 <Form>
                     <label id="filingLabel">Choose your filing status.</label>
-                    <div className="radio ml-2 p-2">
-                            <label>
-                                <input  name="Single"  onClick={this.onCheck(1)} onChange={inputChange('filingStatus') } value="Single" checked={this.state.radio===1 ? true : false}  type="radio"
+                    <div className="radio  p-2">
+                            <label id="filingStatusRadioLabels">
+                                <input  onClick={this.onCheck(1)} onChange={inputChange('filingStatus') } value="Single" checked={this.state.radio===1 ? true : false}  type="radio"
                                      id="Single" />
                                 Single
                             </label>
                    </div>
-                   <div className="radio  ml-2 p-2">
-                            <label>
-                                <input  value="option2" onClick={this.onCheck(2)} onChange={inputChange('filingStatus') } value="Married Filing Jointly" checked={this.state.radio===2 ? true : false}  type="radio"
-                                     id="radio2" />
+                   <div className="radio   p-2">
+                            <label id="filingStatusRadioLabels">
+                                <input   onClick={this.onCheck(2)} onChange={inputChange('filingStatus') } value="Married Filing Jointly" checked={this.state.radio===2 ? true : false}  type="radio"
+                                     id="MarriedJointly" />
                                 Married Filing Jointly
                             </label>
                    </div>
-                   <div className="radio  ml-2 p-2">
-                            <label>
-                                <input  value="option3" onClick={this.onCheck(3)} onChange={inputChange('filingStatus') } value="Married Filing Separately" checked={this.state.radio===3 ? true : false}  type="radio"
-                                     id="radio3" />
+                   <div className="radio   p-2">
+                            <label id="filingStatusRadioLabels">
+                                <input   onClick={this.onCheck(3)} onChange={inputChange('filingStatus') } value="Married Filing Separately" checked={this.state.radio===3 ? true : false}  type="radio"
+                                     id="MarriedSeparately" />
                                Married Filing Separately
                             </label>
                     </div>
-                    <div className="radio ml-2 p-2">
-                            <label>
-                                <input  value="option4" onClick={this.onCheck(4)} onChange={inputChange('filingStatus') } value="Head of Household" checked={this.state.radio===4 ? true : false}  type="radio"
-                                     id="radio4" />
+                    <div className="radio  p-2">
+                            <label id="filingStatusRadioLabels">
+                                <input   onClick={this.onCheck(4)} onChange={inputChange('filingStatus') } value="Head of Household" checked={this.state.radio===4 ? true : false}  type="radio"
+                                     id="HeadofHousehold" />
                                 Head of Household
                             </label>
                    </div>
-                   <div className="radio  ml-2 p-2">
-                            <label>
-                                <input  value="option5" onClick={this.onCheck(5)} onChange={inputChange('filingStatus') } value="Qualifying Widow(er)" checked={this.state.radio===5 ? true : false}  type="radio"
-                                     id="radio5" />
+                   <div className="radio   p-2">
+                            <label id="filingStatusRadioLabels">
+                                <input   onClick={this.onCheck(5)} onChange={inputChange('filingStatus') } value="Qualifying Widow(er)" checked={this.state.radio===5 ? true : false}  type="radio"
+                                     id="Qualifyingwidow" />
                                  Qualifying Widow(er)
                             </label>
                    </div>

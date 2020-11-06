@@ -22,7 +22,7 @@ export class Confirm extends Component {
             <Container>
                 <div id="formLabel" className="text-center">Personal Information Summary</div>
                 <hr />
-                <label>Let's make sure your personal information is correct.</label>
+                <label id="confirmLabels" >Let's make sure your personal information is correct.</label>
 
                <Form>
                    
@@ -31,49 +31,49 @@ export class Confirm extends Component {
                    </Form.Row>
                    <hr id="heavyHr" />
                    <Form.Row>
-                         <label style={{fontWeight:"bold",color:"gray" , marginLeft:'5px', paddingRight:'10px'}}>Name : </label>
-                         <label style={{ textTransform: 'uppercase'}}> {firstName} {middleInitial} {lastName} </label>
+                         <label  className="confirmIdLabels">Name : </label>
+                         <label className="confirmIdLabelsAnswer" style={{ textTransform: 'uppercase'}}> {firstName} {middleInitial} {lastName} </label>
                    </Form.Row>
                    <Form.Row>
-                         <label style={{fontWeight:"bold",color:"gray", marginLeft:'5px' , paddingRight:'10px'}}>Occupation : </label>
-                         <label> {occupation} </label>
+                         <label className="confirmIdLabels">Occupation : </label>
+                         <label className="confirmIdLabelsAnswer"> {occupation} </label>
                    </Form.Row>
                    <Form.Row>
-                         <label style={{fontWeight:"bold",color:"gray", marginLeft:'5px' , paddingRight:'10px'}}>Social Security Number: </label>
-                         <label> {socialId} </label>
+                         <label className="confirmIdLabels">Social Security Number: </label>
+                         <label className="confirmIdLabelsAnswer"> {socialId} </label>
                    </Form.Row>
                    <Form.Row>
-                         <label style={{fontWeight:"bold",color:"gray", marginLeft:'5px' , paddingRight:'10px'}}>Date Of Birth: </label>
-                         <label> {birth} </label>
+                         <label className="confirmIdLabels">Date Of Birth: </label>
+                         <label className="confirmIdLabelsAnswer"> {birth} </label>
                    </Form.Row>
                    <Form.Row>
-                         <label style={{fontWeight:"bold",color:"gray", marginLeft:'5px' , paddingRight:'10px'}}>Address: </label>
-                         <label> {streetAddress}  {aptNo}  , {city} , {state} {zip}</label>
+                         <label className="confirmIdLabels">Address: </label>
+                         <label className="confirmIdLabelsAnswer"> {streetAddress}  {aptNo}   {city}  {state} {zip}</label>
                    </Form.Row>
                     <hr/>
                     <Form.Row>
-                         <label style={{fontWeight:"bold",color:"gray", marginLeft:'5px' , paddingRight:'10px'}}>Filing Status: </label>
-                         <label> {filingStatus} </label>
+                         <label className="confirmIdLabels">Filing Status: </label>
+                         <label className="confirmIdLabelsAnswer"> {filingStatus} </label>
                     </Form.Row>
 
                     { dependentFirstName ? (
                      <div>
                         <hr />
                         <Form.Row>
-                                    <div style={{ textTransform: 'uppercase' , fontSize:'x-large' , color:'rgb(59, 142, 80)'}}>{dependentFirstName} Information</div>  
+                                    <div id="confirmlb">{dependentFirstName} Information</div>  
                         </Form.Row>
                         <hr id="heavyHr" />
                         <Form.Row>
-                                <label style={{fontWeight:"bold",color:"gray" , marginLeft:'5px', paddingRight:'10px'}}>Name : </label>
-                                <label style={{ textTransform: 'uppercase'}}> {dependentFirstName} {dependentMiddleInitial} {dependentLastName} </label>
+                                <label className="confirmIdLabels">Name : </label>
+                                <label className="confirmIdLabelsAnswer" style={{ textTransform: 'uppercase'}}> {dependentFirstName} {dependentMiddleInitial} {dependentLastName} </label>
                         </Form.Row>
                         <Form.Row>
-                                <label style={{fontWeight:"bold",color:"gray", marginLeft:'5px' , paddingRight:'10px'}}>Social Security Number: </label>
-                                <label> {dependentSocialId} </label>
+                                <label className="confirmIdLabels">Social Security Number: </label>
+                                <label className="confirmIdLabelsAnswer"> {dependentSocialId} </label>
                         </Form.Row>
                         <Form.Row>
-                                <label style={{fontWeight:"bold",color:"gray", marginLeft:'5px' , paddingRight:'10px'}}>Date Of Birth: </label>
-                                <label> {dependentBirth} </label>
+                                <label className="confirmIdLabels">Date Of Birth: </label>
+                                <label className="confirmIdLabelsAnswer"> {dependentBirth} </label>
                         </Form.Row>
                         </div>
                     )
@@ -85,20 +85,20 @@ export class Confirm extends Component {
                      <div>
                         <hr />
                         <Form.Row>
-                                    <div style={{ textTransform: 'uppercase' , fontSize:'x-large' , color:'rgb(59, 142, 80)'}}>{spouseFirstName} Information</div>  
+                                    <div id="confirmlb">{spouseFirstName} Information</div>  
                         </Form.Row>
                         <hr id="heavyHr" />
                         <Form.Row>
-                                <label style={{fontWeight:"bold",color:"gray" , marginLeft:'5px', paddingRight:'10px'}}>Name : </label>
-                                <label style={{ textTransform: 'uppercase'}}> {spouseFirstName} {spouseMiddleInitial} {spouseLastName} </label>
+                                <label className="confirmIdLabels">Name : </label>
+                                <label className="confirmIdLabelsAnswer" style={{ textTransform: 'uppercase'}}> {spouseFirstName} {spouseMiddleInitial} {spouseLastName} </label>
                         </Form.Row>
                         <Form.Row>
-                                <label style={{fontWeight:"bold",color:"gray", marginLeft:'5px' , paddingRight:'10px'}}>Social Security Number: </label>
-                                <label> {spouseSocialId} </label>
+                                <label className="confirmIdLabels">Social Security Number: </label>
+                                <label className="confirmIdLabelsAnswer"> {spouseSocialId} </label>
                         </Form.Row>
                         <Form.Row>
-                                <label style={{fontWeight:"bold",color:"gray", marginLeft:'5px' , paddingRight:'10px'}}>Date Of Birth: </label>
-                                <label> {spouseBirth} </label>
+                                <label className="confirmIdLabels">Date Of Birth: </label>
+                                <label className="confirmIdLabelsAnswer"> {spouseBirth} </label>
                         </Form.Row>
                         </div>
                     )

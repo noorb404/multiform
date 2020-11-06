@@ -7,9 +7,26 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 export class Spouse extends Component {
 
    state = {
-       Validated : false
-   };
+    Validated : false,
+    radio1:0,
+    radio2:0,
+    radio3:0,
+    radio4:0,
+    radio5:0,
 
+    };
+
+
+  onCheck1 = (nr) => () => {
+    this.setState({
+      [nr]: 1 
+    });
+  }
+    onCheck2 = (nr) => () => {
+    this.setState({
+      [nr]: 0
+    });
+  }
   //check if the form validation .. TODO check birthday +18 
   handleSubmit = (event) => {
     const form = event.currentTarget;
@@ -129,140 +146,151 @@ export class Spouse extends Component {
                     <hr />
 
 
-                    <Form.Row>
-                      
-                      <div id="checkLabel">
-                              Can a parent (or somebody else) claim you as a dependent on their tax return?
-                      </div>
-                      <div id="checkLabelTop">
-                          <label id="yesNo">
-                            <input 
-                                      type="radio"
-                                      id="yes"
-                                      label="yes"
-                                    />
-                                    Yes
-                          </label>
-                          <label id="yesNo">
-                            <input 
-                                      type="radio"
-                                      id="no"
-                                      label="no"
-                                    />
-                                    No
-                          </label>
-                      </div>
-                  </Form.Row>
-
-                  <hr/>
-
-                  
+                    
                   <Form.Row>
-                  
-                      <div id="checkLabel">
-                      Do you want to contribute $3 to the Presidential Election Campaign Fund?
-                      </div>
-                      <div id="checkLabelTop">
-                          <label id="yesNo">
-                            <input 
-                                      type="radio"
-                                      id="yes"
-                                      label="yes"
-                                    />
-                                    Yes
-                          </label>
-                          <label id="yesNo">
-                            <input 
-                                      type="radio"
-                                      id="no"
-                                      label="no"
-                                    />
-                                    No
-                          </label>
-                      </div>
-                  
-                  </Form.Row>
+                 
+                 <div id="checkLabel">
+                         Can a parent (or somebody else) claim you as a dependent on their tax return?
+                 </div>
+                 <div id="checkLabelTop">
+                     <label id="yesNo">
+                       <input 
+                                 type="radio"
+                                 id="yes"
+                                 onClick={this.onCheck1("radio1")}
+                                 checked={this.state.radio1===1 ? true : false}
+                               />
+                               Yes
+                     </label>
+                     <label id="yesNo">
+                       <input 
+                                 type="radio"
+                                 id="no"
+                                 onClick={this.onCheck2("radio1")}
+                                 checked={this.state.radio1===0 ? true : false}
+                               />
+                               No
+                     </label>
+                 </div>
+             </Form.Row>
 
-                  <hr/>
-                  <Form.Row>
-                  
-                      <div id="checkLabel">
-                            Is this person legally blind?
-                      </div>
-                      
-                      <div id="checkLabelTop">
-                          <label id="yesNo">
-                            <input 
-                                      type="radio"
-                                      id="yes"
-                                      label="yes"
-                                    />
-                                    Yes
-                          </label>
-                          <label id="yesNo">
-                            <input 
-                                      type="radio"
-                                      id="no"
-                                      label="no"
-                                    />
-                                    No
-                          </label>
-                      </div>
-                  </Form.Row>
+             <hr/>
 
-                  <hr/>
-                  <Form.Row>
-                  
-                      <div id="checkLabel">
-                      Has this person passed away before the filing of this tax return?
-                      </div>
-                      <div id="checkLabelTop">
-                          <label id="yesNo">
-                            <input 
-                                      type="radio"
-                                      id="yes"
-                                      label="yes"
-                                    />
-                                    Yes
-                          </label>
-                          <label id="yesNo">
-                            <input 
-                                      type="radio"
-                                      id="no"
-                                      label="no"
-                                    />
-                                    No
-                          </label>
-                      </div>
-                  
-                  </Form.Row>
+             
+             <Form.Row>
+             
+                 <div id="checkLabel">
+                 Do you want to contribute $3 to the Presidential Election Campaign Fund?
+                 </div>
+                 <div id="checkLabelTop">
+                     <label id="yesNo">
+                       <input 
+                                 type="radio"
+                                 id="yes"
+                                 onClick={this.onCheck1("radio2")}
+                                 checked={this.state.radio2===1 ? true : false}
+                               />
+                               Yes
+                     </label>
+                     <label id="yesNo">
+                       <input 
+                                 type="radio"
+                                 id="no"
+                                 onClick={this.onCheck2("radio2")}
+                                 checked={this.state.radio2===0 ? true : false}
+                               />
+                               No
+                     </label>
+                 </div>
+             
+             </Form.Row>
 
-                  <hr/>
-                  <Form.Row>
-                  
-                      <div id="checkLabel">
-                            Were you impacted by a qualified disaster in 2019?
-                      </div>
-                      <div id="checkLabelTop">
-                          <label id="yesNo">
-                            <input 
-                                      type="radio"
-                                      id="yes"
-                                      label="yes"
-                                    />
-                                    Yes
-                          </label>
-                          <label id="yesNo">
-                            <input 
-                                      type="radio"
-                                      id="no"
-                                      label="no"
-                                    />
-                                    No
-                          </label>
-                      </div>
-                      
-                  </Form.Row>
+             <hr/>
+             <Form.Row>
+             
+                 <div id="checkLabel">
+                       Is this person legally blind?
+                 </div>
+                 
+                 <div id="checkLabelTop">
+                     <label id="yesNo">
+                       <input 
+                                 type="radio"
+                                 id="yes"
+                                 onClick={this.onCheck1("radio3")}
+                                 checked={this.state.radio3===1 ? true : false}
+                               />
+                               Yes
+                     </label>
+                     <label id="yesNo">
+                       <input 
+                                 type="radio"
+                                 id="no"
+                                 onClick={this.onCheck2("radio3")}
+                                 checked={this.state.radio3===0 ? true : false}
+                               />
+                               No
+                     </label>
+                 </div>
+             </Form.Row>
+
+             <hr/>
+             <Form.Row>
+             
+                 <div id="checkLabel">
+                 Has this person passed away before the filing of this tax return?
+                 </div>
+                 <div id="checkLabelTop">
+                     <label id="yesNo">
+                       <input 
+                                 type="radio"
+                                 id="yes"
+                                 onClick={this.onCheck1("radio4")}
+                                 checked={this.state.radio4===1 ? true : false}
+                               />
+                               Yes
+                     </label>
+                     <label id="yesNo">
+                       <input 
+                                 type="radio"
+                                 id="no"
+                                 onClick={this.onCheck2("radio4")}
+                                 checked={this.state.radio4===0 ? true : false}
+                               />
+                               No
+                     </label>
+                 </div>
+             
+             </Form.Row>
+
+             <hr/>
+             <Form.Row>
+            
+                 <div id="checkLabel">
+                       Were you impacted by a qualified disaster in 2019?
+                 </div>
+                 <div id="checkLabelTop">
+                     <label id="yesNo">
+                       <input 
+                                 type="radio"
+                                 id="yes"
+                                 onClick={this.onCheck1("radio5")}
+                                 checked={this.state.radio5===1 ? true : false}
+                               />
+                               Yes
+                     </label>
+                     <label id="yesNo">
+                       <input 
+                                 type="radio"
+                                 id="no"
+                                 onClick={this.onCheck2("radio5")}
+                                 checked={this.state.radio5===0 ? true : false}
+                               />
+                               No
+                     </label>
+                 </div>
+                 
+             </Form.Row>
 
                     <hr />
                   
