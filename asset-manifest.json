@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/multiform/static/css/main.18b36ff7.chunk.css",
-    "main.js": "/multiform/static/js/main.cfa139e2.chunk.js",
-    "main.js.map": "/multiform/static/js/main.cfa139e2.chunk.js.map",
+    "main.css": "/multiform/static/css/main.cde95ad9.chunk.css",
+    "main.js": "/multiform/static/js/main.fd074922.chunk.js",
+    "main.js.map": "/multiform/static/js/main.fd074922.chunk.js.map",
     "runtime-main.js": "/multiform/static/js/runtime-main.c2bdf736.js",
     "runtime-main.js.map": "/multiform/static/js/runtime-main.c2bdf736.js.map",
     "static/css/2.20aa2d7b.chunk.css": "/multiform/static/css/2.20aa2d7b.chunk.css",
-    "static/js/2.0ab3aecd.chunk.js": "/multiform/static/js/2.0ab3aecd.chunk.js",
-    "static/js/2.0ab3aecd.chunk.js.map": "/multiform/static/js/2.0ab3aecd.chunk.js.map",
+    "static/js/2.d900e702.chunk.js": "/multiform/static/js/2.d900e702.chunk.js",
+    "static/js/2.d900e702.chunk.js.map": "/multiform/static/js/2.d900e702.chunk.js.map",
     "index.html": "/multiform/index.html",
     "static/css/2.20aa2d7b.chunk.css.map": "/multiform/static/css/2.20aa2d7b.chunk.css.map",
-    "static/css/main.18b36ff7.chunk.css.map": "/multiform/static/css/main.18b36ff7.chunk.css.map",
-    "static/js/2.0ab3aecd.chunk.js.LICENSE.txt": "/multiform/static/js/2.0ab3aecd.chunk.js.LICENSE.txt"
+    "static/css/main.cde95ad9.chunk.css.map": "/multiform/static/css/main.cde95ad9.chunk.css.map",
+    "static/js/2.d900e702.chunk.js.LICENSE.txt": "/multiform/static/js/2.d900e702.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.c2bdf736.js",
     "static/css/2.20aa2d7b.chunk.css",
-    "static/js/2.0ab3aecd.chunk.js",
-    "static/css/main.18b36ff7.chunk.css",
-    "static/js/main.cfa139e2.chunk.js"
+    "static/js/2.d900e702.chunk.js",
+    "static/css/main.cde95ad9.chunk.css",
+    "static/js/main.fd074922.chunk.js"
   ]
 }
