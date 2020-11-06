@@ -36,9 +36,30 @@ export class Form extends Component {
     };
 
 
-    confirmPage = () =>{
-        this.setState({step: 7});
+    fileUpload = () =>{
+        this.setState({step: 2});
+        this.setState({
+            firstName:'John',
+            lastName:'Smith',
+            middleInitial:'M',
+            occupation:'Actor',
+            socialId:'3166952',
+            birth:'09/17/1979',
+            streetAddress:'Brooklyn',
+            aptNo:'18',
+            city:'New York',
+            state:'New York',
+            zip:'100501',
+            filingStatus:'Single',
+            dependentFirstName:'Ken',
+            dependentLastName:'Smith',
+            dependentMiddleInitial:'M',
+            dependentSocialId:'3166953',
+        });
     }
+    confirmPage = () => {
+        this.setState({step : 7});
+    } 
     doubleStep = () =>{
         const { step } = this.state;
         this.setState({step: step + 2 })
@@ -68,7 +89,7 @@ export class Form extends Component {
             case 1:
                 return(
                     <Choose 
-                        confirmPage={this.confirmPage}
+                        fileUpload={this.fileUpload}
                         nextStep={this.nextStep}
                     />
                 );

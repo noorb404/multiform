@@ -376,7 +376,7 @@ export class FilingStatus extends Component {
                     <hr />
               
                     <Form.Row>
-                        <div id="checkLabelTop">
+                        <div id="checkLabelTop2">
                             <label id="agreeCheckboxLabel">
                               <input 
                                         type="checkbox"

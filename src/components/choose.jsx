@@ -12,7 +12,7 @@ const Choose = props =>{
     };
     const onChangeHandler = e =>
     {
-        props.confirmPage();
+        props.fileUpload();
     };
     const handleClick = event => {
         hiddenFileInput.current.click();
@@ -28,9 +28,9 @@ const Choose = props =>{
                <Form>
                    <Form.Group>
                         <label className="chooseLabels">Upload last year PDF file:</label>
-                        <Form.Row>  
+                        <Form.Row >  
                         
-                        <Button id="manuallyBtn" style={{backgroundColor:'white', color:'black' , border:'0'}} onClick={handleClick}>
+                        <Button className="float-right" id="manuallyBtn" onClick={handleClick}>
                                 Upload a file
                             </Button>
                             <input
@@ -44,8 +44,8 @@ const Choose = props =>{
 
                     <hr/>
                     <Form.Group>
-                        <label className="chooseLabels">Or you can manually fill out your info:</label>
-                        <Button className="float-right" id="manuallyBtn" onClick={onContinue}>Fill your information manually</Button>      
+                        <label style={{width:'100%'}} className="chooseLabels">Or you can manually fill out your info:</label>
+                        <Button id="manuallyBtn" onClick={onContinue}>Fill your information manually</Button>      
                     </Form.Group>
                 
                    
