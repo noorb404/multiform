@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
-import '../css/taxPayerInfo.css'
 import {Form , Button , Col , Container} from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
+
+
+//THIS PAGE IS FOR SPOUSE INFORMATION 
 
 
 export class Spouse extends Component {

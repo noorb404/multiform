@@ -1,15 +1,21 @@
 import React, { Component } from 'react';
 import {Button, Container, Form } from 'react-bootstrap';
 
+
+//THIS PAGE IS FOR SHOWING WHAT DATA HAVE BEEN FILLED 
+
 export class Confirm extends Component {
     continue = e => {
         e.preventDefault();
         this.props.nextStep();
     };
-
     back = e => {
-        e.preventDefault();
-        this.props.prevStep();
+        if(this.props.values.dependentCheck===true){
+            this.props.doublePrevStep();
+        }else{
+            e.preventDefault();
+            this.props.prevStep();
+        }
     };
 
     render() {
@@ -48,7 +54,7 @@ export class Confirm extends Component {
                    </Form.Row>
                    <Form.Row>
                          <label className="confirmIdLabels">Address: </label>
-                         <label className="confirmIdLabelsAnswer"> {streetAddress}  {aptNo}   {city}  {state} {zip}</label>
+                         <label className="confirmIdLabelsAnswer"> {streetAddress}  {aptNo} , {city} , {state} {zip}</label>
                    </Form.Row>
                     <hr/>
                     <Form.Row>

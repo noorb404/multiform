@@ -1,9 +1,9 @@
 
 import './App.css';
-import TaxPayerInfo from './components/taxPayerInfo';
+import './css/main.css'
 import Form from './components/form'
-
-import {Col ,Row , Container} from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {Container} from 'react-bootstrap';
 
 
 function App() {

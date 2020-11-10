@@ -3,11 +3,14 @@ import FilingStatus from './filingStatus';
 import Choose from './choose';
 import Confirm from './confirm';
 import TaxPayerInfo from './taxPayerInfo';
-import Success from './success';
 import DependentAsk from './dependentAsk';
 import Dependent from './dependent';
 import Spouse from './spouse';
 import Submit from './submit';
+
+
+//THIS IS MAIN FORM THAT CONTROLS WHICH PAGE IS NEXT
+
 
 export class Form extends Component {
     state = {
@@ -24,6 +27,8 @@ export class Form extends Component {
         state:'',
         zip:'',
         filingStatus:'',
+        filingStatusCheck:false,
+        dependentCheck:false,
         dependentFirstName:'',
         dependentLastName:'',
         dependentMiddleInitial:'',
@@ -63,9 +68,13 @@ export class Form extends Component {
     confirmPage = () => {
         this.setState({step : 7});
     } 
-    doubleStep = () =>{
+    doubleNextStep = () =>{
         const { step } = this.state;
         this.setState({step: step + 2 })
+    }
+    doublePrevStep = () =>{
+        const { step } = this.state;
+        this.setState({step: step - 2 })
     }
     nextStep = () => {
         const { step } = this.state;
@@ -82,19 +91,29 @@ export class Form extends Component {
             [input]: e.target.value
         });
     };
+    statusInput = input =>{
+        this.setState({
+            filingStatusCheck:input
+        });
+    }
+    dependentInput = input =>{
+        this.setState({
+            dependentCheck:input
+        });
+    }
 
 
     render() {
         const { step } = this.state;
-        const {firstName,lastName,middleInitial,occupation,socialId,birth,streetAddress,aptNo,city,state,zip,filingStatus,dependentFirstName,dependentLastName,dependentMiddleInitial,dependentSocialId,dependentBirth,spouseFirstName,spouseLastName,spouseMiddleInitial,spouseSocialId,spouseBirth,interested,insureBtn } = this.state;
-        const values = { firstName,lastName,middleInitial,occupation,socialId,birth,streetAddress,aptNo,city,state,zip,filingStatus,dependentFirstName,dependentLastName,dependentMiddleInitial,dependentSocialId,dependentBirth,spouseFirstName,spouseLastName,spouseMiddleInitial,spouseSocialId,spouseBirth,interested,insureBtn};
+        const {firstName,lastName,middleInitial,occupation,socialId,birth,streetAddress,aptNo,city,state,zip,filingStatus,dependentFirstName,dependentLastName,dependentMiddleInitial,dependentSocialId,dependentBirth,spouseFirstName,spouseLastName,spouseMiddleInitial,spouseSocialId,spouseBirth,interested,insureBtn,filingStatusCheck,dependentCheck} = this.state;
+        const values = { firstName,lastName,middleInitial,occupation,socialId,birth,streetAddress,aptNo,city,state,zip,filingStatus,dependentFirstName,dependentLastName,dependentMiddleInitial,dependentSocialId,dependentBirth,spouseFirstName,spouseLastName,spouseMiddleInitial,spouseSocialId,spouseBirth,interested,insureBtn,filingStatusCheck,dependentCheck};
 
         switch (step) {
             case 1:
                 return(
                     <Choose 
-                    fileUpload={this.fileUpload}
-                    nextStep={this.nextStep}
+                        fileUpload={this.fileUpload}
+                        nextStep={this.nextStep}
                 />
                 );
             case 2:
@@ -111,7 +130,8 @@ export class Form extends Component {
                     <FilingStatus
                         nextStep={this.nextStep}
                         prevStep={this.prevStep}
-                        doubleStep={this.doubleStep}
+                        doubleNextStep={this.doubleNextStep}
+                        statusInput={this.statusInput}
                         inputChange={this.inputChange}
                         values={values}
                     />
@@ -121,7 +141,6 @@ export class Form extends Component {
                     <Spouse 
                         nextStep={this.nextStep}
                         prevStep={this.prevStep}
-                     
                         inputChange={this.inputChange}
                         values={values}
                     />
@@ -131,6 +150,8 @@ export class Form extends Component {
                     <DependentAsk 
                         nextStep={this.nextStep}
                         prevStep={this.prevStep}
+                        doublePrevStep={this.doublePrevStep}
+                        dependentInput={this.dependentInput}
                         confirmPage={this.confirmPage}
                         values={values}
                     />
@@ -149,15 +170,16 @@ export class Form extends Component {
                     <Confirm  
                         nextStep={this.nextStep}
                         prevStep={this.prevStep}
+                        doublePrevStep={this.doublePrevStep}
                         values={values}
                     />
                 );
             case 8:
                 return(
                     <Submit 
-                    inputChange={this.inputChange}
-                    nextStep={this.nextStep}
-                    values={values}
+                        inputChange={this.inputChange}
+                        nextStep={this.nextStep}
+                        values={values}
                 />
                 );
             default:

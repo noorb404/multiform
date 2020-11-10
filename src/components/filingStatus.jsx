@@ -1,12 +1,15 @@
 import React, { Component } from 'react'
-import '../css/taxPayerInfo.css'
-import {Form , Button , Col , Container , ToggleButton , ToggleButtonGroup} from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import {Form , Button ,Container} from 'react-bootstrap';
+
+
+//THIS PAGE IS FOR FILLING STATUS -- SINGLE , MARIED ..
+
 
 export class FilingStatus extends Component {
 
     state = {
-        radio: 0
+        radio: 0,
+        check:false
       }
       
     onCheck = (nr) => () => {
@@ -17,12 +20,14 @@ export class FilingStatus extends Component {
         
     }
     continue = e => {
-        if(this.state.radio==2 || this.state.radio==3){
+        if(this.state.radio===2 || this.state.radio===3){
+            this.props.statusInput(false);
             e.preventDefault();
             this.props.nextStep();
         }
         else{
-            this.props.doubleStep();
+            this.props.statusInput(true);
+            this.props.doubleNextStep();
         }
        
     };
@@ -33,7 +38,7 @@ export class FilingStatus extends Component {
     };
 
     render() {
-        const { values, inputChange } = this.props;
+        const {inputChange } = this.props;
 
         return (
             <div id="filingStatusMainDiv"  className="form-container" >

@@ -17,7 +17,7 @@
 }
 #dependentDiv{
   padding: 5%;
-  height: 550px;
+  height: 600px;
 }
 #dependentDivAsk{
   padding: 5%;
@@ -42,7 +42,7 @@
 #filingLabel{
   font-size: large;
   font-family: Arial;
-  padding: 2%;
+  padding: 1%;
 }
 #formLabel{
   color: brown;
@@ -254,23 +254,25 @@ input[type=file]{
 
   /* MAIN DIVS */
   #filingStatusMainDiv{
-    padding: 0%;
     height: 500px;
     width: 100%;
   }
   #chooseDiv{
-    padding: 0%;
-    height: 250px;
+  
+    height: 290px;
   }
   #confirmDiv{
-
     padding: 11%;
   }
   #infoDiv{
-    padding: 0%;
-    height: 1300px;
+    height: 1330px;
   }
-  
+  #dependentDivAsk{
+    height: 290px;
+  }
+  #dependentDiv{
+    height: 590px;
+  }  
 
 
 
@@ -381,20 +383,18 @@ input[type=file]{
 
   /* MAIN DIVS */
   #filingStatusMainDiv{
-    padding: 0%;
+
     height: 550px;
     width: 100%;
   }
   #chooseDiv{
-    padding: 0%;
-    height: 300px;
+    height: 350px;
   }
   #confirmDiv{
     padding: 10%;
   }
   #infoDiv{
-    padding: 0%;
-    height: 1700px;
+    height: 1730px;
   }
   #dependentDiv{
     height: 770px;
@@ -521,20 +521,17 @@ input[type=file]{
 
     /* MAIN DIVS */
     #filingStatusMainDiv{
-      padding: 0%;
       height: 550px;
       width: 100%;
     }
     #chooseDiv{
-      padding: 0%;
       height: 300px;
     }
     #confirmDiv{
       padding: 10%;
     }
     #infoDiv{
-      padding: 0%;
-      height: 1700px;
+      height: 1730px;
     }
     #dependentDiv{
       height: 760px;
@@ -666,20 +663,18 @@ input[type=file]{
 
     /*MAIN DIVS*/
     #filingStatusMainDiv{
-      padding: 0%;
       height: 550px;
       width: 100%;
     }
     #chooseDiv{
-      padding: 0%;
-      height: 250px;
+
+      height: 300px;
     }
     #confirmDiv{
       padding:10%;
     }
     #infoDiv{
-      padding: 0%;
-      height: 1650px;
+      height: 1750px;
     }
     #spouseDiv{
       height: 1230px ;
@@ -688,7 +683,7 @@ input[type=file]{
       height: 750px;
     }
     #dependentDivAsk{
-      height: 400px;
+      height: 430px;
     }
 
 

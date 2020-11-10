@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
-import '../css/taxPayerInfo.css'
 import {Form , Button , Col , Container} from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import Feedback from 'react-bootstrap/esm/Feedback';
+
+
+//THIS PAGE IS FOR CUSTOMER INFORMATION
+
 
 
 export class FilingStatus extends Component {

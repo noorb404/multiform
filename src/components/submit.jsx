@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import {Button, Container, Form } from 'react-bootstrap';
-import {ClipLoader,RingLoader} from "react-spinners";
+import {ClipLoader} from "react-spinners";
  
+
+//THIS PAGE IS FOR SUBMITING AFTER CONFIRMING THE DATA
+
 
 
 export class Submit extends Component {
@@ -40,10 +43,7 @@ export class Submit extends Component {
             <Container style={{width:'100%'}}>
                 <div id="formLabel" className="text-center">Submit</div>
                 <hr/>
-
                <Form>
-
-
                    {/*  Ask if he want to submit the form */}
                    {values.interested ==='maybe' ? (<div>
                         <Form.Group>
@@ -58,7 +58,6 @@ export class Submit extends Component {
                     {/*   IF PRESSED NO THEN SHOW A MESSAGE  */}
                     { values.interested === 'no' ? (
                      <div className="submitYesNoDiv text-center">
-                       
                         <label className="submitLabels">Thank you , hope to see you again soon!</label>
                      </div>
                     ):null }
@@ -80,7 +79,6 @@ export class Submit extends Component {
                                                     loading={this.state.priceLoading}
                                                 />
                                             </div>
-
 
                                             {this.state.priceShow ===true ? (
                                                     <label  className="submitLabels"> 189$ </label>

@@ -1,5 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {Button, Container, Form } from 'react-bootstrap';
+
+
+
+//FIRST PAGE
 
 
 
@@ -47,9 +51,6 @@ const Choose = props =>{
                         <label style={{width:'100%'}} className="chooseLabels">Or you can manually fill out your info:</label>
                         <Button id="manuallyBtn" onClick={onContinue}>Fill your information manually</Button>      
                     </Form.Group>
-                
-                   
-                
                 </Form>
             </Container>
             </div>

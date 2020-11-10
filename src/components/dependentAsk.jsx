@@ -1,5 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {Button, Container, Form } from 'react-bootstrap';
+
+
+//THIS PAGE FOR ASKING IF THERE ANY DEPENDENTS
 
 
 
@@ -7,14 +10,20 @@ const DependentAsk = props =>{
 
 
     const yes = e => {
+        props.dependentInput(false);
         e.preventDefault();
         props.nextStep();
     };
     const back = e => {
-        e.preventDefault();
-        props.prevStep();
+        if(props.values.filingStatusCheck===true){
+            props.doublePrevStep();
+        }else{
+            e.preventDefault();
+            props.prevStep();
+        }
     };
     const no = e =>{
+        props.dependentInput(true);
         props.confirmPage();
     };
  
