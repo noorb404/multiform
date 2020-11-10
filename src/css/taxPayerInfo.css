@@ -6,7 +6,6 @@
 }
 #chooseDiv{
   padding: 5%;
- 
 }
 #infoDiv{
   padding: 6%;
@@ -123,11 +122,19 @@ hr{
   border: rgba(0, 0, 0, 0.2);
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
+.btn-primary:focus{
+  background-color: #706897;
+  box-shadow: none !important;
+}
+
+.btn-primary:hover{
+  background-color: #8d86af;
+}
 
 #backBtn{
   background-color: white;
-  color: rgb(0, 102, 255);
-  border: 1px solid rgb(0, 102, 255);
+  color:  #706897;
+  border: 1px solid  #706897;
   float: left;
   width: 150px;
   font-size: medium;
