@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/multiform/static/css/main.61084105.chunk.css",
+    "main.css": "/multiform/static/css/main.59389424.chunk.css",
     "main.js": "/multiform/static/js/main.436e9d66.chunk.js",
     "main.js.map": "/multiform/static/js/main.436e9d66.chunk.js.map",
     "runtime-main.js": "/multiform/static/js/runtime-main.c2bdf736.js",
@@ -10,14 +10,14 @@
     "static/js/2.4245a8cd.chunk.js.map": "/multiform/static/js/2.4245a8cd.chunk.js.map",
     "index.html": "/multiform/index.html",
     "static/css/2.20aa2d7b.chunk.css.map": "/multiform/static/css/2.20aa2d7b.chunk.css.map",
-    "static/css/main.61084105.chunk.css.map": "/multiform/static/css/main.61084105.chunk.css.map",
+    "static/css/main.59389424.chunk.css.map": "/multiform/static/css/main.59389424.chunk.css.map",
     "static/js/2.4245a8cd.chunk.js.LICENSE.txt": "/multiform/static/js/2.4245a8cd.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.c2bdf736.js",
     "static/css/2.20aa2d7b.chunk.css",
     "static/js/2.4245a8cd.chunk.js",
-    "static/css/main.61084105.chunk.css",
+    "static/css/main.59389424.chunk.css",
     "static/js/main.436e9d66.chunk.js"
   ]
 }
