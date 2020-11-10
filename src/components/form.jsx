@@ -92,10 +92,10 @@ export class Form extends Component {
         switch (step) {
             case 1:
                 return(
-                        <Choose 
-                            fileUpload={this.fileUpload}
-                            nextStep={this.nextStep}
-                        />
+                    <Choose 
+                    fileUpload={this.fileUpload}
+                    nextStep={this.nextStep}
+                />
                 );
             case 2:
                 return (
@@ -156,8 +156,9 @@ export class Form extends Component {
                 return(
                     <Submit 
                     inputChange={this.inputChange}
+                    nextStep={this.nextStep}
                     values={values}
-                /> 
+                />
                 );
             default:
         }

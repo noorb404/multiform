@@ -7,19 +7,28 @@ import {ClipLoader,RingLoader} from "react-spinners";
 export class Submit extends Component {
 
     state={
-        loading: true,
-        priceShow: false
+        priceLoading: true,
+        confirmLoading:true,
+        priceShow: false,
+        confirmingMsg:false,
+        confirmedMsg:false
     }
 
-
+    /* SPIN FOR TWO SECONDS */
     handleRender = () => {
-      
-        setTimeout(() =>{
-            this.props.values.insureBtn='yes';
-        },0);
         setTimeout(()=>{
-            this.setState({ loading : false , priceShow:true});
-         },3000);        
+            this.setState({ priceLoading : false , priceShow:true});
+         },2000);
+                
+    }
+    handleRender2 = () => {
+        setTimeout(()=>{
+            this.setState({ confirmLoading : false , confirmedMsg:true});
+         },2000);
+                
+    }
+    confirm = () =>{
+        this.setState({confirmingMsg:true});
     }
 
 
@@ -27,12 +36,15 @@ export class Submit extends Component {
         const {values,inputChange } = this.props;
   
         return (
-            <div  id="chooseDiv" className="form-container">
+            <div  id="submitDiv" className="form-container">
             <Container style={{width:'100%'}}>
                 <div id="formLabel" className="text-center">Submit</div>
                 <hr/>
 
                <Form>
+
+
+                   {/*  Ask if he want to submit the form */}
                    {values.interested ==='maybe' ? (<div>
                         <Form.Group>
                             <div className="submitYesNoDiv text-center">
@@ -43,47 +55,75 @@ export class Submit extends Component {
                         </Form.Group>
                    </div>):null}
             
-
+                    {/*   IF PRESSED NO THEN SHOW A MESSAGE  */}
                     { values.interested === 'no' ? (
                      <div className="submitYesNoDiv text-center">
                        
-                        <label className="submitLabels">Thank you , hope to see you soon!</label>
+                        <label className="submitLabels">Thank you , hope to see you again soon!</label>
                      </div>
                     ):null }
 
 
-
+                     {/*  IF PRESSED YES THEN SHOW THE PRICE AND CONFIRM BUTTON WITH LOADING SPINNER */}
                     { values.interested === 'yes' ? (
                         <div className="submitYesNoDiv text-center">
-                            
                             <label className="submitLabels">Do you want to insure this form?</label>
-                            {values.insureBtn === 'yes' ? (
-                                <div>
-                                    <div>
-                                        <ClipLoader
-                                            size={32}
-                                            color={"#706897"}
-                                            loading={this.state.loading}
-                                        />
-                                    </div>
-                                   {this.state.priceShow ===true ? (
-                                        <label className="submitLabels"> 189$ </label>
-                                   ) : null}  
-                                    <Button id="submitY" value="no" onClick={inputChange('insureBtn') }>Cancel</Button>    
-                                    <Button id="submitY" value="no" >Confirm</Button> 
-                              </div>
-                            ):
-                            <div>
-                                <Button id="submitY" value="yes" onClick={this.handleRender()} >Yes</Button>    
-                                <Button id="submitY" value="yes" onClick={inputChange('insureBtn') }>No</Button>
-                            </div>
-                            }
-                          
+                                     {/* THIS WON'T BE SHOWN UNLESS HE PRESS YES */}
+                                    {values.insureBtn === 'yes' ? (
+                                        <div>
+                                            <div>
+                                                {/*  HANDLERENDER IS FUNCTION FOR 2 SEC DELAY FOR THE SPINNER */}
+                                                {this.handleRender()}
+                                                <ClipLoader
+                                                    size={32}
+                                                    color={"#706897"}
+                                                    loading={this.state.priceLoading}
+                                                />
+                                            </div>
+
+
+                                            {this.state.priceShow ===true ? (
+                                                    <label  className="submitLabels"> 189$ </label>
+                                            ) : null}  
+
+
+                                            {this.state.confirmingMsg===true ?(
+                                                <div>
+                                                    {this.handleRender2()}
+                                                    <div>
+                                                        <ClipLoader
+                                                            size={32}
+                                                            color={"#706897"}
+                                                            loading={this.state.confirmLoading}
+                                                        />
+                                                    </div>
+
+                                                    {this.state.confirmedMsg===true ?(
+                                                        <div>
+                                                            <label  style={{color:'green'}} className="submitLabels">Successful Payment!</label>
+                                                        </div>
+                                                    ):<label  className="submitLabels"> Confirming...</label>}
+                                                    
+                                                </div>
+                                            ):null}
+
+                                         {/* IF STATEMENT IS FOR REMOVING BUTTONS IN THE END */}   
+                                         {this.state.confirmedMsg===false ?(
+                                             <div>
+                                                <Button id="submitY" value="no" onClick={inputChange('insureBtn')}>Cancel</Button>    
+                                                <Button id="submitY" value="confirm" onClick={this.confirm} >Confirm</Button> 
+                                            </div>
+                                         ):null}
+                                        </div>
+                                    ):
+                                        
+                                        <div>
+                                            <Button id="submitY" value="yes" onClick={inputChange('insureBtn')} >Yes</Button>    
+                                            <Button id="submitY" value="no" onClick={inputChange('insureBtn')}>No</Button>
+                                        </div>
+                                    }
                         </div>
-                     ) : null }
-                
-                   
-                
+                     ) : null }     
                 </Form>
             </Container>
             </div>

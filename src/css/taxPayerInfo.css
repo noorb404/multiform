@@ -27,8 +27,9 @@
   padding: 5%;
   height: 1050px;
 }
-
-
+#submitDiv{
+  padding: 5%;
+}
 
 .submitYesNoDiv{
   padding: 2%;
