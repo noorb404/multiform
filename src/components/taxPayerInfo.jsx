@@ -379,6 +379,7 @@ export class FilingStatus extends Component {
                         <div id="checkLabelTop2">
                             <label id="agreeCheckboxLabel">
                               <input 
+                                        required
                                         type="checkbox"
                                         id="agreeCheckbox"
                                       />
