@@ -122,6 +122,10 @@ hr{
   border: rgba(0, 0, 0, 0.2);
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
+
+.btn-primary:active{
+  background-color: #706897;
+}
 .btn-primary:focus{
   background-color: #706897;
   box-shadow: none !important;
