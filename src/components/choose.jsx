@@ -31,7 +31,7 @@ const Choose = props =>{
                         <Form.Row >  
                         
                         <Button className="float-right" id="manuallyBtn" onClick={handleClick}>
-                                Upload a file
+                                Upload a File
                             </Button>
                             <input
                                 type="file"
