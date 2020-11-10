@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import '../css/taxPayerInfo.css'
 import {Form , Button , Col , Container} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Feedback from 'react-bootstrap/esm/Feedback';
 
 
 export class FilingStatus extends Component {
@@ -374,21 +375,21 @@ export class FilingStatus extends Component {
                       
                   </Form.Row>
                     <hr />
-              
+
+                  <Form.Group>
                     <Form.Row>
-                        <div id="checkLabelTop2">
-                            <label id="agreeCheckboxLabel">
-                              <input 
-                                        required
-                                        type="checkbox"
-                                        id="agreeCheckbox"
-                                      />
-                                      Agree to terms and conditions
-                            </label>
-                        </div>
-                        
-                        
-                    </Form.Row>
+                          <Form.Check 
+                            required
+                            name="terms"
+                            label="Agree to terms and conditions"
+                          />
+                            
+                         
+                      </Form.Row>
+                      <Feedback>Must agree</Feedback>
+                  </Form.Group>
+
+
                     <Button   id="nextBtn" type="submit">Save and Continue</Button>
                     <Button  id="backBtn" onClick={this.back}>Previous Page</Button>
                   </Form>

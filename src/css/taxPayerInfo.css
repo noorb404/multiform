@@ -17,12 +17,15 @@
   height: 600px;
 }
 #dependentDiv{
+  padding: 5%;
   height: 550px;
 }
 #dependentDivAsk{
+  padding: 5%;
   height: 300px;
 }
 #spouseDiv{
+  padding: 5%;
   height: 1050px;
 }
 
@@ -66,12 +69,6 @@
   padding-right:10px;
   font-size: 15px;
 }
-#agreeCheckboxLabel{
-  display: block;
-  padding-left: 15px;
-  text-indent: -15px;
-  font-size: 14px;
-}
 #checkLabelTop2{
   padding-bottom: 10px;
 }
@@ -111,6 +108,12 @@ hr{
 
 
 /*    BUTTON   */
+.btn-primary{
+  background-color: #706897;
+  border: rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
 #backBtn{
   background-color: white;
   color: rgb(0, 102, 255);
@@ -148,17 +151,7 @@ input[type=radio] {
 input[type=file]{
   color: rgb(0, 81, 255);
 }
-#agreeCheckbox{
-  width: 16px;
-  height: 16px;
-  padding: 0;
-  margin:0;
-  vertical-align: bottom;
-  position: relative;
-  top: -1px;
-  right: 2px;
- 
-}
+
 
 
 
@@ -230,24 +223,6 @@ input[type=file]{
   }
   .taxInput2{
     margin-right: 23px;
-  }
-
-  #agreeCheckboxLabel{
-    display: block;
-    padding-left: 15px;
-    text-indent: -15px;
-    font-size: 13px;
-  }
-  #agreeCheckbox{
-    width: 16px;
-    height: 16px;
-    padding: 0;
-    margin:0;
-    vertical-align: bottom;
-    position: relative;
-    top: -1px;
-    right: 2px;
-   
   }
 
   /* MAIN DIVS */
@@ -327,24 +302,6 @@ input[type=file]{
   }
   .taxPayerLabels{
     font-size: 14px;
-  }
-
-  #agreeCheckboxLabel{
-    display: block;
-    padding-left: 15px;
-    text-indent: -15px;
-    font-size: 12px;
-  }
-  #agreeCheckbox{
-    width: 15px;
-    height: 15px;
-    padding: 0;
-    margin:0;
-    vertical-align: bottom;
-    position: relative;
-    top: -1px;
-    right: 2px;
-   
   }
 
   #confirmlb{
@@ -503,24 +460,6 @@ input[type=file]{
       padding-right:10px;
       font-size: 13px;
     }
-    #agreeCheckboxLabel{
-      display: block;
-      padding-left: 15px;
-      text-indent: -15px;
-      font-size: 11px;
-    }
-    #agreeCheckbox{
-      width: 13px;
-      height: 13px;
-      padding: 0;
-      margin:0;
-      vertical-align: bottom;
-      position: relative;
-      top: -1px;
-      right: 2px;
-     
-    }
-
 
 
 
@@ -628,23 +567,7 @@ input[type=file]{
     #yesNo{
       margin-right: 7px;
     }
-    #agreeCheckboxLabel{
-      display: block;
-      padding-left: 15px;
-      text-indent: -15px;
-      font-size: 11px;
-    }
-    #agreeCheckbox{
-      width: 13px;
-      height: 13px;
-      padding: 0;
-      margin:0;
-      vertical-align: bottom;
-      position: relative;
-      top: -1px;
-      right: 2px;
-     
-    }
+
     #checkLabel{
       font-size: 14px;
       font-family: Arial;
