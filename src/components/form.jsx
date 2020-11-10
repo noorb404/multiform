@@ -7,6 +7,7 @@ import Success from './success';
 import DependentAsk from './dependentAsk';
 import Dependent from './dependent';
 import Spouse from './spouse';
+import Submit from './submit';
 
 export class Form extends Component {
     state = {
@@ -33,6 +34,8 @@ export class Form extends Component {
         spouseMiddleInitial:'',
         spouseSocialId:'',
         spouseBirth:'',
+        interested:'maybe',
+        insureBtn:''
     };
 
 
@@ -80,18 +83,19 @@ export class Form extends Component {
         });
     };
 
+
     render() {
         const { step } = this.state;
-        const {firstName,lastName,middleInitial,occupation,socialId,birth,streetAddress,aptNo,city,state,zip,filingStatus,dependentFirstName,dependentLastName,dependentMiddleInitial,dependentSocialId,dependentBirth,spouseFirstName,spouseLastName,spouseMiddleInitial,spouseSocialId,spouseBirth} = this.state;
-        const values = { firstName,lastName,middleInitial,occupation,socialId,birth,streetAddress,aptNo,city,state,zip,filingStatus,dependentFirstName,dependentLastName,dependentMiddleInitial,dependentSocialId,dependentBirth,spouseFirstName,spouseLastName,spouseMiddleInitial,spouseSocialId,spouseBirth};
+        const {firstName,lastName,middleInitial,occupation,socialId,birth,streetAddress,aptNo,city,state,zip,filingStatus,dependentFirstName,dependentLastName,dependentMiddleInitial,dependentSocialId,dependentBirth,spouseFirstName,spouseLastName,spouseMiddleInitial,spouseSocialId,spouseBirth,interested,insureBtn } = this.state;
+        const values = { firstName,lastName,middleInitial,occupation,socialId,birth,streetAddress,aptNo,city,state,zip,filingStatus,dependentFirstName,dependentLastName,dependentMiddleInitial,dependentSocialId,dependentBirth,spouseFirstName,spouseLastName,spouseMiddleInitial,spouseSocialId,spouseBirth,interested,insureBtn};
 
         switch (step) {
             case 1:
                 return(
-                    <Choose 
-                        fileUpload={this.fileUpload}
-                        nextStep={this.nextStep}
-                    />
+                        <Choose 
+                            fileUpload={this.fileUpload}
+                            nextStep={this.nextStep}
+                        />
                 );
             case 2:
                 return (
@@ -150,7 +154,10 @@ export class Form extends Component {
                 );
             case 8:
                 return(
-                    <Success />  
+                    <Submit 
+                    inputChange={this.inputChange}
+                    values={values}
+                /> 
                 );
             default:
         }
