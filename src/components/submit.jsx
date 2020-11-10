@@ -1,9 +1,27 @@
 import React, { Component } from 'react';
 import {Button, Container, Form } from 'react-bootstrap';
-
+import {ClipLoader,RingLoader} from "react-spinners";
+ 
 
 
 export class Submit extends Component {
+
+    state={
+        loading: true,
+        priceShow: false
+    }
+
+
+    handleRender = () => {
+      
+        setTimeout(() =>{
+            this.props.values.insureBtn='yes';
+        },0);
+        setTimeout(()=>{
+            this.setState({ loading : false , priceShow:true});
+         },3000);        
+    }
+
 
     render() {
         const {values,inputChange } = this.props;
@@ -41,14 +59,23 @@ export class Submit extends Component {
                             <label className="submitLabels">Do you want to insure this form?</label>
                             {values.insureBtn === 'yes' ? (
                                 <div>
-                                    <label className="submitLabels"> 189$ </label>
+                                    <div>
+                                        <ClipLoader
+                                            size={32}
+                                            color={"#706897"}
+                                            loading={this.state.loading}
+                                        />
+                                    </div>
+                                   {this.state.priceShow ===true ? (
+                                        <label className="submitLabels"> 189$ </label>
+                                   ) : null}  
                                     <Button id="submitY" value="no" onClick={inputChange('insureBtn') }>Cancel</Button>    
                                     <Button id="submitY" value="no" >Confirm</Button> 
-                                </div>
+                              </div>
                             ):
                             <div>
-                                <Button id="submitY" value="yes" onClick={inputChange('insureBtn') }>Yes</Button>    
-                                <Button id="submitY" value="no" onClick={inputChange('insureBtn') }>No</Button>
+                                <Button id="submitY" value="yes" onClick={this.handleRender()} >Yes</Button>    
+                                <Button id="submitY" value="yes" onClick={inputChange('insureBtn') }>No</Button>
                             </div>
                             }
                           
