@@ -39,9 +39,9 @@ export class Submit extends Component {
         const {values,inputChange } = this.props;
   
         return (
-            <div  id="submitDiv" className="form-container">
+            <div id="submitDiv" className="form-container">
             <Container style={{width:'100%'}}>
-                <div id="formLabel" className="text-center">Submit</div>
+                <div id="formLabel" className="text-center">Last step</div>
                 <hr/>
                <Form>
                    {/*  Ask if he want to submit the form */}

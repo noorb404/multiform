@@ -257,10 +257,7 @@ input[type=file]{
     height: 500px;
     width: 100%;
   }
-  #chooseDiv{
-  
-    height: 290px;
-  }
+
   #confirmDiv{
     padding: 11%;
   }
@@ -387,9 +384,7 @@ input[type=file]{
     height: 550px;
     width: 100%;
   }
-  #chooseDiv{
-    height: 350px;
-  }
+  
   #confirmDiv{
     padding: 10%;
   }
@@ -524,9 +519,7 @@ input[type=file]{
       height: 550px;
       width: 100%;
     }
-    #chooseDiv{
-      height: 300px;
-    }
+    
     #confirmDiv{
       padding: 10%;
     }
@@ -666,10 +659,7 @@ input[type=file]{
       height: 550px;
       width: 100%;
     }
-    #chooseDiv{
-
-      height: 300px;
-    }
+    
     #confirmDiv{
       padding:10%;
     }

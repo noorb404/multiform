@@ -1,3 +1,7 @@
+*:not(i){
+  font-family: 'Roboto', sans-serif !important;
+}
+
 body {
   margin: 0;
   background-color: transparent !important; 
@@ -6,4 +10,52 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.form-container{
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.3) !important;
+  background-color: rgba(255,255,255,0.8) !important;
+  border: 1px solid#5c6e9133;
+  font-family: 'Roboto', sans-serif;
+  margin-top: 50px;
+}
+
+#formLabel{
+  max-width: 700px !important;
+  margin: auto;
+  font-size: 35px !important;
+  color: #525252 !important;
+  color: #5c6e91 !important;
+}
+
+#formSubLabel{
+  max-width: 700px !important;
+  margin: 0px auto 30px auto;
+  font-size: 16px !important;
+  color: #5c6e91 !important;
+}
+
+.manuallyBtn{
+  width: 100%;
+  font-size: 20px !important;
+  font-weight: 600 !important;
+  border: 1px solid #5c6e91 !important;
+  color: #5c6e91 !important;
+}
+
+.manuallyBtn:hover:not(.transparent){
+  background-color: #5c6e91 !important;
+  color: white !important;
+}
+
+.transparent{
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  color: #5c6e91 !important;
+  font-weight: 600 !important;
+}
+
+hr{
+  border-color: #5c6e91 !important;
 }
